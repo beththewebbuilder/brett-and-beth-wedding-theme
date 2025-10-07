@@ -16,13 +16,31 @@ Text Domain: buildnbloom
     font-weight: 400;
     font-style: normal;
 }
-
+.montez-regular {
+    font-family: "Montez", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.passions-conflict-regular {
+    font-family: "Passions Conflict", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.mr-bedfort-regular {
+    font-family: "Mr Bedfort", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.lavishly-yours-regular {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 .windsong-regular {
     font-family: "WindSong", roboto;
     font-weight: 400;
     font-style: normal;
 }
-
 .windsong-medium {
     font-family: "WindSong", cursive;
     font-weight: 500;
@@ -76,6 +94,10 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+a {
+    color: var(--mauve);
+    font-weight: bold;
+}
 .wreath-header {
     text-align: center;
     position: relative;
@@ -114,17 +136,24 @@ body {
     width: 100%;
 } */
 
+.text-header {
+    font-family: "Lavishly Yours", cursive;
+    font-size: 2.5rem;
+}
+
 .text-content {
     padding: 1rem;
     text-align: center;
     max-width: 1000px;
     margin: auto;
+    background-color: rgba(255,255,255,0.6);
 }
 .form-container {
     padding: 1rem;
     text-align: left;
     max-width: 600px;
     margin: auto;
+    background-color: rgba(255,255,255,0.6);
 }
 .form-container .form-input {
     margin-bottom: 2rem;
@@ -143,6 +172,9 @@ body {
 .invited-text {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: "Passions Conflict", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .invite-text {
@@ -208,6 +240,7 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 2rem;
+    font-family: "Lavishly Yours", cursive;
 }
 .yes-response, .no-response {
     display: none;
@@ -219,7 +252,6 @@ body {
     background-color: white;
     color: var(--mauve);
     display: block;
-    width: 100%;
     cursor: pointer;
 }
 .btn:hover {
@@ -230,6 +262,7 @@ body {
     border-color: #ccc;
     color: #ccc;
     cursor: auto;
+    background-color: white;
 }
 
 .text-center {

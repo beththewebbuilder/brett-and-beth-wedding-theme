@@ -13,51 +13,53 @@ $(document).ready(function() {
 
     $('#send_rsvp_btn').click(function() {
 
-        $(".loading-background").show();
+        if($("#name").val().length != 0) {
+            $(".loading-background").show();
         
-        $.ajax({
-            type: 'POST',
-            url : myajax.ajaxurl,
-            dateType: 'json',
-            data: {
-                action: "save_rsvp",
-                name: $('#name').val(),
-                people: $('#people').val(),
-                response: $('input[name="response"]:checked').val(),
-                song: $('#song').val(),
-                message: $('#details').val()
-            },
-            success: function(response) {
-                $(".loading-background").hide();
-                
-                if(response.toUpperCase().indexOf('ERROR') >= 0) {
-                    alert('error!');
-                }
-                else {
-                    $(".form-response-box").show();
-                    if($('input[name="response"]:checked').val() == 'yes') {
-                        $(".yes-response").show();
-                        // show 'can't wat to see you' message
-                        confetti({
-                            particleCount: 100,
-                            spread: 70,
-                            origin: { y: 0.6 },
-                        });
+            $.ajax({
+                type: 'POST',
+                url : myajax.ajaxurl,
+                dateType: 'json',
+                data: {
+                    action: "save_rsvp",
+                    name: $('#name').val(),
+                    people: $('#people').val(),
+                    response: $('input[name="response"]:checked').val(),
+                    song: $('#song').val(),
+                    message: $('#details').val()
+                },
+                success: function(response) {
+                    $(".loading-background").hide();
+                    
+                    if(response.toUpperCase().indexOf('ERROR') >= 0) {
+                        alert('error!');
                     }
                     else {
-                        $(".no-response").show();
+                        $(".form-response-box").show();
+                        if($('input[name="response"]:checked').val() == 'yes') {
+                            $(".yes-response").show();
+                            // show 'can't wat to see you' message
+                            confetti({
+                                particleCount: 100,
+                                spread: 70,
+                                origin: { y: 0.6 },
+                            });
+                        }
+                        else {
+                            $(".no-response").show();
+                        }
+                        $('#name').val("");
+                        $('#people').val("");
+                        $('#people').val(2);
+                        $('#song').val("");
+                        $('#details').val("");
                     }
-                    $('#name').val("");
-                    $('#people').val("");
-                    $('#people').val(2);
-                    $('#song').val("");
-                    $('#details').val("");
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert('error!');
                 }
-            },
-            error: function(xhr, ajaxOptions, thrownError) {
-                alert('error!');
-            }
-        })
+            })
+        }
         return false;
     });
 
