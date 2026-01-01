@@ -9,12 +9,6 @@ get_header();
     <img class="header-img" src="<?php echo get_bloginfo('template_directory'); ?>/assets/header.jpg"/>
 </div>
 
-<!-- <div class="header-hero">
-    <div class="header-text bacasime-antique-regular">
-        Brett & Beth
-    </div>
-</div> -->
-
 <div class="text-content">
     <div class="header-txt bacasime-antique-regular">
         Brett & Beth
@@ -25,10 +19,17 @@ get_header();
     <div class="invite-text inria-serif-bold">
         SATURDAY 20th JUNE 2026
     </div>
-    <div class="sub-text inria-serif-light-italic">from</div>
-    <div class="invite-text inria-serif-bold">
-        6.30pm
+    <div class="sub-text inria-serif-light-italic">
+        from
+        <span class="invite-text inria-serif-bold">
+            6.30pm
+        </span>
+        'til
+        <span class="invite-text inria-serif-bold">
+            late
+        </span>
     </div>
+    
     <div class="sub-text inria-serif-light-italic">at</div>
     <div class="invite-text inria-serif-bold">
         Magelake Parish Pavilion, Uffculme
@@ -39,7 +40,7 @@ get_header();
 
     <div class="main-text inria-serif-regular">
         <p>We’re having an intimate ceremony and officially becoming Mr & Mrs Luffman on Thursday 4th June 2026.</p>
-        <p>But the real celebration comes a little later — on <strong>Saturday 20th June</strong>, we’re throwing a big party with all the people who have touched our lives over the years.
+        <p>But the real celebration comes a little later; on <strong>Saturday 20th June</strong>, we’re throwing a big party with all the people who have touched our lives over the years.
         We’d love for you to come, share a drink, hit the dance floor, and celebrate this next chapter with us.</p>
         <p>We’ll be cutting the cake at 7.30pm and then heading straight into our first dance — so if you don’t want to miss those moments, be sure to join us by then!</p>
     </div>
@@ -50,8 +51,8 @@ get_header();
     </div>
     <div class="main-text inria-serif-regular">
         Magelake Pavilion is just outside the village of Uffculme, about 5 minutes from Junction 27 (Tiverton exit) on the M5, and there’s plenty of parking on site.
-        <p><strong>Address:</strong> Magelake Pavilion and Recreation Ground, Culmstock Road, Uffculme, Devon, EX15 3DR</p>
-        <p><strong>what3words:</strong> ///jumbo.blazed.bake</p>
+        <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/sZt559TWm2kn64sv7?g_st=aw">Magelake Pavilion and Recreation Ground, Culmstock Road, Uffculme, Devon, EX15 3DR</a></p>
+        <p><strong>what3words:</strong> <a href="https://w3w.co/jumbo.blazed.bake">///jumbo.blazed.bake</a></p>
     </div>
 </div>
 <div class="text-content">
@@ -60,10 +61,10 @@ get_header();
     </div>
     <div class="main-text inria-serif-regular">
         If you're planning to party into the night (and we really hope you are!), there are a few options to stay close by:
-        <p><a href="https://www.premierinn.com/gb/en/hotels/england/devon/tiverton/tiverton.html?cid=GLBC_TIVTHY">Premier Inn Tiverton</a> - 15 minutes away</p>
-        <p><a href="https://www.padbrookpark.co.uk/">Padbrook Park Hotel</a> - 13 minutes away</p>
-        <p><a href="https://www.travelodge.co.uk/hotels/102/Tiverton-hotel?WT.tsrc=GHA_Organic&utm_campaign=GHA_Tiverton&utm_medium=GHA_Organic&utm_source=google">Travelodge Tiverton</a> - 11 minutes away</p>
-        <p><a href="https://www.weirmill-devon.co.uk/">Weir Mill Farm Bed & Breakfast</a> - 7 minutes away</p>
+        <p><a href="https://www.premierinn.com/gb/en/hotels/england/devon/tiverton/tiverton.html?cid=GLBC_TIVTHY">Premier Inn Tiverton</a> <span class="sub-text inria-serif-light-italic">15 minutes away</span></p>
+        <p><a href="https://www.padbrookpark.co.uk/">Padbrook Park Hotel</a> <span class="sub-text inria-serif-light-italic">13 minutes away</span></p>
+        <p><a href="https://www.travelodge.co.uk/hotels/102/Tiverton-hotel?WT.tsrc=GHA_Organic&utm_campaign=GHA_Tiverton&utm_medium=GHA_Organic&utm_source=google">Travelodge Tiverton</a> <span class="sub-text inria-serif-light-italic">11 minutes away</span></p>
+        <p><a href="https://www.weirmill-devon.co.uk/">Weir Mill Farm Bed & Breakfast</a> <span class="sub-text inria-serif-light-italic">7 minutes away</span></p>
     </div>
 </div>
 <div class="text-content">
@@ -109,7 +110,10 @@ get_header();
         RSVP
     </div>
     <div class="main-text inria-serif-regular">
-        We would love for you to join us to celebrate this next step. Please let us know if you can make it or not.
+        We would love for you to join us to celebrate this next step. 
+    </div>
+    <div class="inria-serif-light-italic">
+        Please let us know if you can make it or not by filling out the form below or emailing us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a>
     </div>
 </div>
 <div class="form-container">
@@ -119,16 +123,28 @@ get_header();
             <input type="text" name="name" id="name" required>
         </div>
         <div class="form-input">
-            <label for='people'>Number of people you're RSVP-ing for</label></br>
+            <label for='people'>Number of people you're RSVP-ing for <span class="inria-serif-light-italic">(Don't forget to include yourself!)</span></label></br>
             <input type="number" min="1" max="10" name="people" id="people" value="2" required>
-            <span class="help-block inria-serif-light-italic">(So we have an idea of numbers and to save you filling this out multiple times - don't forget to include yourself!)</span>
         </div>
         <div class="form-input">
             <p>Will you be joining the party?</p>
-            <input type="radio" name="response" id="yes" value="yes" checked>
-            <label for="yes">🥳 Yes, wouldn't miss it!</label><br/>
-            <input type="radio" name="response" id="no" value="no">
-            <label for="no">😟 Sorry, can't make it</label>
+            <div class="radio-btns">
+                <div class="rd-btn">
+                    <input type="radio" name="response" id="yes" value="yes" checked>
+                    <label for="yes" class="rd-resp-yes text-center">
+                        <div class="inria-serif-bold"><span class="icon">🥳<span> Yes</div>
+                        <span class="inria-serif-light-italic sub-text">wouldn't miss it!</span>
+                    </label>
+                </div>
+                <div class="rd-btn">
+                    <input type="radio" name="response" id="no" value="no">
+                    <label for="no" class="rd-resp-no text-center">
+                        <div class="inria-serif-bold"><span class="icon">🥺<span> Sorry</div>
+                        <span class="inria-serif-light-italic sub-text">can't make it</span>
+                    </label>
+                </div>
+            </div>
+            
         </div>
         <div class="form-input">
             <label for='song'>
