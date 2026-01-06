@@ -3,151 +3,103 @@ Theme Name: Brett & Beth Wedding
 Author: Bethany Fowler  
 Author URI: https://bethanyfowler.me/
 Description: Theme for Luffman Wedding
-Version: 0.0.1
+Version: 0.0.2
 Text Domain: buildnbloom
 */
 
 :root {
   --mauve: #724264;
+  --navy: #244d8b;
 }
-
-.bacasime-antique-regular {
-    font-family: "Bacasime Antique", roboto;
+.baskerville-regular {
+    font-family: "Libre Baskerville", roboto;
     font-weight: 400;
     font-style: normal;
 }
-.montez-regular {
-    font-family: "Montez", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-.passions-conflict-regular {
-    font-family: "Passions Conflict", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-.mr-bedfort-regular {
-    font-family: "Mr Bedfort", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-.lavishly-yours-regular {
-    font-family: "Lavishly Yours", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-.windsong-regular {
-    font-family: "WindSong", roboto;
-    font-weight: 400;
-    font-style: normal;
-}
-.windsong-medium {
-    font-family: "WindSong", cursive;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.inria-serif-light {
-    font-family: "Inria Serif", roboto;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.inria-serif-regular {
-    font-family: "Inria Serif", roboto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.inria-serif-bold {
-    font-family: "Inria Serif", roboto;
+.baskerville-bold {
+    font-family: "Libre Baskerville", roboto;
     font-weight: 700;
+    font-style: bold;
+}
+.alex-brush {
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
     font-style: normal;
 }
 
-.inria-serif-light-italic {
-    font-family: "Inria Serif", roboto;
-    font-weight: 300;
-    font-style: italic;
+.capital-text {
+    text-transform: uppercase;
+    letter-spacing: 6px;
 }
 
-.inria-serif-regular-italic {
-    font-family: "Inria Serif", roboto;
-    font-weight: 400;
-    font-style: italic;
+.floral-border-top {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
-
-.inria-serif-bold-italic {
-    font-family: "Inria Serif", roboto;
-    font-weight: 700;
-    font-style: italic;
+.floral-border-top img, .floral-page-split, .floral-page-split img {
+    width: 100%;
 }
-  
   
 body {
     background-color: white;
-    margin: 0px;
-    color: var(--mauve);
-    background-image: url("./assets/border.png");
-    background-position: bottom;
-    background-attachment: fixed;
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin: auto;
+    max-width: 1000px;
+    position: relative;
+    color: var(--navy);
+    padding: 1rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
 }
 a {
-    color: var(--mauve);
-    font-weight: bold;
+    color: var(--navy);
 }
-.wreath-header {
-    text-align: center;
-    position: relative;
+
+.names {
+    font-size: 1.5rem;
+    margin-top: 17%;
 }
-.wreath {
-    width: 25rem;
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.lg-font {
+    font-size: 1.5rem;
 }
-.header-img {
-    width: 20rem;
-    height: 20rem;
-    object-fit: cover;
-    border-radius: 50%;
+.additional {
+    font-size: 1.5rem;
+}
+
+.party {
     margin-top: 1rem;
+    font-size: 4rem;
 }
-.header-txt {
-    font-size: 5rem;
+.party .capital-text {
+    font-size: 2rem;
 }
-/* .header-hero {
-    background-image: url("./assets/header.jpg");
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-} */
 
-/* .header-text {
-    font-size: 5rem;
+.rsvp-btn-container {
+    height: 2rem;
+}
+
+.rsvp-here-btn {
+    padding: 1rem;
+    background-color: var(--navy);
     color: white;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-} */
+    text-decoration: none;
+    border-radius: 10px;
+}
 
+.rsvp-here-btn:hover {
+    color: var(--navy);
+    background-color: white;
+}
+
+
+ /* OLD */
 .text-header {
     font-family: "Lavishly Yours", cursive;
     font-size: 2.5rem;
 }
 
-.text-content {
-    padding: 1rem;
-    text-align: center;
-    max-width: 1000px;
-    margin: auto;
-    background-color: rgba(255,255,255,0.6);
-}
 .form-container {
     padding: 1rem;
     text-align: left;

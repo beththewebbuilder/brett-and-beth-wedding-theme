@@ -28,10 +28,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/f8042aa37c.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=WindSong:wght@400;500&display=swap&family=Montez&display=swap&family=Passions+Conflict&display=swap&family=Mr+Bedfort&display=swap&family=Lavishly+Yours&display=swap" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=WindSong:wght@400;500&display=swap&family=Montez&display=swap&family=Passions+Conflict&display=swap&family=Mr+Bedfort&display=swap&family=Lavishly+Yours&display=swap" rel="stylesheet"> -->
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     </head>
 
   <body>

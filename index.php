@@ -2,40 +2,60 @@
 get_header();
 ?>
 
-<div class="background-fade"></div>
-
-<div class="wreath-header">
-    <img class="wreath" src="<?php echo get_bloginfo('template_directory'); ?>/assets/wreath.png"/>
-    <img class="header-img" src="<?php echo get_bloginfo('template_directory'); ?>/assets/header.jpg"/>
+<div class="floral-border-top">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-border-top.png"/>
 </div>
 
-<!-- <div class="header-hero">
-    <div class="header-text bacasime-antique-regular">
-        Brett & Beth
+<div class="names">
+    <div class="baskerville-regular capital-text name">
+        Brett Luffman
     </div>
-</div> -->
+    <div class="alex-brush additional">
+        and
+    </div>
+    <div class="baskerville-regular capital-text name">
+        Bethany Fowler
+    </div>
+</div>
+
+<div class="baskerville-regular">
+    warmly invite you to join them in celebrating their marriage at their 
+</div>
+
+<div class="party">
+    <div class="alex-brush">
+        Happily Ever
+    </div>
+    <div class="baskerville-regular capital-text">
+        After Party
+    </div>
+</div>
+
+<div class="alex-brush additional">at</div>
+<div class="baskerville-regular capital-text"><a href="https://maps.app.goo.gl/24S2qWyveQHYLN8JA">Magelake Parish Pavilion, Uffculme </br> EX15 3DP</a></div>
+<div class="alex-brush additional">on</div>
+<div class="baskerville-regular capital-text lg-font">Sat 20 Jun 2026</div>
+<div>
+    <span class="alex-brush additional">from</span>
+    <span class="baskerville-regular">6.30pm</span>
+    <span class="alex-brush additional">until</span>
+    <span class="baskerville-regular">late</span>
+</div>
+
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+<div class="rsvp-btn-container">
+    <a href="#rsvp" class="rsvp-here-btn baskerville-regular capital-text">
+        RSVP
+    </a>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
 
 <div class="text-content">
-    <div class="header-txt bacasime-antique-regular">
-        Brett & Beth
-    </div>
-    <div class="invited-text montez-regular">
-        You're invited!
-    </div>
-    <div class="invite-text inria-serif-bold">
-        SATURDAY 20th JUNE 2026
-    </div>
-    <div class="sub-text inria-serif-light-italic">from</div>
-    <div class="invite-text inria-serif-bold">
-        6.30pm
-    </div>
-    <div class="sub-text inria-serif-light-italic">at</div>
-    <div class="invite-text inria-serif-bold">
-        Magelake Parish Pavilion, Uffculme
-    </div>
-    <a href="#rsvp" class="rsvp-btn btn inria-serif-regular text-center">
-        RSVP HERE
-    </a>
+
 
     <div class="main-text inria-serif-regular">
         <p>We’re having an intimate ceremony and officially becoming Mr & Mrs Luffman on Thursday 4th June 2026.</p>
