@@ -2,20 +2,31 @@
 get_header();
 
 global $wpdb;
-$yesResponse = $wpdb->get_results( "SELECT * FROM wp_rsvp_response WHERE accept = 1" );
-$noResponse = $wpdb->get_results( "SELECT * FROM wp_rsvp_response WHERE accept = 0" );
+$yesResponse = $wpdb->get_var( "SELECT SUM(people) FROM wp_rsvp_response WHERE accept = 1" );
+$noResponse = $wpdb->get_var( "SELECT SUM(people) FROM wp_rsvp_response WHERE accept = 0" );
+$totalResponse = $wpdb->get_var( "SELECT SUM(people) FROM wp_rsvp_response" );
 $allResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_response" );
 
 ?>
 
 <div class="background-fade"></div>
 
+<div class="header-txt bacasime-antique-regular text-center">
+    Brett & Beth
+</div>
+
+<div class="result-num bacasime-antique-regular text-center">
+    We have had a total of <em><?php echo $totalResponse; ?></em> responses from the <em>255</em> we sent out
+</div>
+
+</br>
+
 <div class="results">
     <div class="yes-results">
         <div class="title">🥳</div>
         <div class="result-desc inria-serif-regular">We've got</div>
         <div class="result-num bacasime-antique-regular">
-            <?php echo count($yesResponse); ?>
+            <?php echo $yesResponse; ?>
         </div>
         <div class="result-desc inria-serif-regular">coming to our party!</div>
     </div>
@@ -23,7 +34,7 @@ $allResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_response" );
         <div class="title">😔</div>
         <div class="result-desc inria-serif-regular">There are</div>
         <div class="result-num bacasime-antique-regular">
-            <?php echo count($noResponse); ?>
+            <?php echo $noResponse; ?>
         </div>
         <div class="result-desc inria-serif-regular">losers not coming!</div>
     </div>

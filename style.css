@@ -1,9 +1,9 @@
 /*
-Theme Name: Brett & Beth Wedding
+Theme Name: Brett & Beth Wedding Theme 2026
 Author: Bethany Fowler  
 Author URI: https://bethanyfowler.me/
 Description: Theme for Luffman Wedding
-Version: 0.0.2
+Version: 1.1.0
 Text Domain: buildnbloom
 */
 
@@ -157,30 +157,6 @@ a {
     }
 }
 
-.form-response-box {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    display: none;
-}
-.form-response-content {
-    color: var(--mauve);
-    top: 50%;
-    left: 50%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    border: 1px solid #b08da1;
-    border-radius: .2rem;
-    padding: 1rem;
-    background-color: white;
-    width: 70vw;
-    position: fixed;
-    text-align: center;
-}
 .modal-title {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -292,4 +268,94 @@ tr.accept-0 td {
 }
 tr.accept-1 td {
     color: #627662;
+}
+.radio-btns {
+    display: flex;
+}
+
+.rd-btn {
+  width: 8rem;
+  height: 3.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.rd-btn label,
+.rd-btn input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.rd-btn label {
+    padding: 5px;
+    border: 1px solid var(--mauve);
+    cursor: pointer;
+    z-index: 1;
+    color: #808080;
+}
+
+.rd-btn label .sub-text {
+    font-size: 14px;
+}
+
+.rd-btn input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.rd-btn input[type="radio"] .icon {
+    display: none;
+}
+
+.rd-btn input[type="radio"]:checked+label,
+.Checked+label {
+  background-color: rgba(114, 66, 107, 0.1);
+  border: 2px solid var(--mauve);
+  color: var(--mauve);
+}
+.rd-btn input[type="radio"]:checked .icon {
+    display: block;
+}
+
+.rd-btn input[type="radio"]:hover+label {
+    background-color: var(--mauve);
+    color: white;
+}
+
+.rd-btn .rd-resp-yes {
+    border-radius: 20px 0px 0px 20px;
+}
+.rd-btn .rd-resp-no {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.form-response-box {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+.form-response-content {
+    background-color: var(--mauve);
+    top: 50%;
+    left: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    border: 1px solid #b08da1;
+    border-radius: .2rem;
+    padding: 1rem;
+    color: white;
+    width: 70vw;
+    position: fixed;
+    text-align: center;   
 }

@@ -49,8 +49,10 @@ function save_rsvp() {
   if( $_POST['name'] != '') {
         try {
             $accept = true;
+            $responseType = "accepted";
             if($_POST['response'] != 'yes') {
                 $accept = false;
+                $responseType = "declined";
             }
             $created_at = date('Y-m-d H:i:s');
 
@@ -65,6 +67,26 @@ function save_rsvp() {
                     'respond' => $created_at,
                 )
             );
+
+            //send email
+            $to = "rsvp@brett-and-beth.co.uk";
+            $subject = "Wedding RSVP - " . $responseType;
+            $message = "<html>
+            <head>
+            <title>Wedding RSVP</title>
+            </head>
+            <body>
+            <p>" . $_POST['name'] . " has " . $responseType . " the wedding invite!</p>
+            <p>Go to <a href='brett-and-beth.co.uk/our-rsvp'>brett-and-beth.co.uk/our-rsvp</a> to see all responses.</p>
+            </body>
+            </html>";
+            
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $headers .= 'From: <webmaster@example.com>' . "\r\n";
+
+            mail($to,$subject,$message, $headers);
+
             echo "Success";
         }
         catch (Exception $e) {
