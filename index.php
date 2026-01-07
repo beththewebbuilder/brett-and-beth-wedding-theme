@@ -67,7 +67,7 @@ get_header();
     What time should I arrive?
 </div>
 <div class="baskerville-regular">
-    <p>You're very welcome to arrive any time from 6.30pm. We're planning to cut the cake at 7.30pm, followed straight away by our first dance to open up the disco.</p>
+    <p>You're very welcome to arrive any time from 6.30pm. We're planning to cut the cake at 7.30pm, followed by our first dance to kick off the disco.</p>
     <p>If you don't want to miss those moments, be sure to join us by then!</p>
 </div>
 <div class="floral-page-split">
@@ -125,7 +125,7 @@ get_header();
 </div>
 <div class="baskerville-regular">
     <p>Children are very welcome.</p>
-    <p>We'll also have access to the football fields next to the pavilion, so feel free to bring a ball (and anything else for a bit of fresh air between dances!).</p>
+    <p>We'll also have access to the football fields behind the pavilion, so there is plenty of space for running around and getting some fresh air between dances!</p>
 </div>
 <div class="floral-page-split">
     <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
@@ -275,9 +275,10 @@ get_header();
     RSVP
 </div>
 <p class="baskerville-regular form-label">
-    Please let us know if you'll be joining us at our Happily Ever After Party by 30th April 2026
+    Please let us know if you'll be joining us at our Happily Ever After Party
 </p>
 <p class="baskerville-regular">
+    Please RSVP by 30th April 2026 </br>
     <small>
     Alternatively RSVP via email us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB.
     </small>

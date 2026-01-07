@@ -3,7 +3,7 @@ Theme Name: Brett & Beth Wedding Theme 2026
 Author: Bethany Fowler  
 Author URI: https://bethanyfowler.me/
 Description: Theme for Luffman Wedding: updated with blue floral pattern
-Version: 2.0.0
+Version: 2.0.1
 Text Domain: buildnbloom
 */
 
@@ -255,6 +255,9 @@ label .show-reject, label .show-accept, .inline .show-reject, .inline .show-acce
     position: fixed;
     text-align: center;   
 }
+.loading-send img {
+    width: 80%;
+}
 .loaded-content {
     display: none;
 }
@@ -314,11 +317,6 @@ label .show-reject, label .show-accept, .inline .show-reject, .inline .show-acce
 .result-num {
     font-size: 3rem;
     font-weight: bold;
-}
-.table-list {
-    width: 80%;
-    margin: auto;
-    margin-top: 4rem;
 }
 table {
     width: 100%;
