@@ -83,7 +83,7 @@ function save_rsvp() {
             
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $headers .= 'From: <webmaster@example.com>' . "\r\n";
+            $headers .= 'From: <webmaster@brett-and-beth.co.uk>' . "\r\n";
 
             mail($to,$subject,$message, $headers);
 
