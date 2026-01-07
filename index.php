@@ -288,7 +288,7 @@ get_header();
         <div class="form-input">
             <label for="name">Your name(s)*</label>
             <p><em>If you're bringing a guest and their name isn't on the invitation, please add it here or drop us an email.</em></p>
-            <input type="text" name="name" id="name" placeholder="Jane & John Smith or The Johnsons" required>
+            <input type="text" name="name" id="name" placeholder="e.g. Jane & John Smith or The Johnsons" required>
         </div>
 
         <p class="form-label">Will you be attending?*</p>
@@ -339,33 +339,49 @@ get_header();
 </div>
 
 <div class="form-response-box">
-    <div class="loaded-content">
-        <div class="form-response-content">
-            <div class="yes-response">
-                <div class="modal-title bacasime-antique-regular">
-                    We can't wait to see you!
-                </div>
-                <div class="modal-content inria-serif-regular">
-                    Thank you for responding and letting us know you're coming. We're really excited and can't wait to see you there!
-                </div>
-            </div>
-            <div class="no-response">
-                <div class="modal-title bacasime-antique-regular">
-                    We'll miss you!
-                </div>
-                <div class="modal-content inria-serif-regular">
-                    Thank you for responding and letting us know you not able to come. We will miss you, but hopefully we can catch-up soon!
-                </div>
-            </div>
-            <div class="love-brett-beth">love, </br> The Luffmans</div>
-            <a class="btn inria-serif-regular" id="close-modal" type="button">Close</a>
+    <div class="form-response-content">
+        <div class="loading-send">
+            <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/sending-gif.webp"/>
+            <p class="baskerville-regular capital-text">Sending...</p>
         </div>
-    </div>
-    <div class="loading-send">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/sending-gif.webp"/>
-        <p class="baskerville-regular capital-text">Sending...</p>
+        
+    <div class="loaded-content">
+        <div class="floral-bouquet">
+            <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-bouquet.png"/>
+        </div>
+
+        <div class="yes-response">
+            <div class="baskerville-regular capital-text lg-font">
+                We can't wait to see you!
+            </div>
+            <p class="baskerville-regular">
+                Thank you for letting us know you're coming, it means so much to us and we can't wait to celebrate together.
+            </p>
+        </div>
+        <div class="no-response">
+            <div class="baskerville-regular capital-text lg-font">
+                We'll miss you!
+            </div>
+            <p class="baskerville-regular">
+                Thank you for letting us know. We'll miss you on the day, but we completely understand and hope to see you soon.
+            </p>
+        </div>
+
+        <div class="baskervill-regular">
+            <em>If you need to update your response at any point, just drop us an email at rsvp@brett-and-beth.co.uk.</em>
+            </br>
+            <span class="alex-brush xl-font">with love,</span>
+            </br>
+            <span class="alex-brush xl-font">The Luffmans</span>
+            
+        </div>
+
+        <button class="close-btn baskerville-regular capital-text" type="button" id="close-modal">
+            Close
+        </button>
     </div>
     
+    </div>
 </div>
 
 <?php

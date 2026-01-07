@@ -71,7 +71,8 @@ $(document).ready(function() {
     $('#send_rsvp_btn').click(function() {
 
         if($("#name").val().length != 0) {
-            $(".loading-background").show();
+            $(".form-response-box").show();
+            $(".loading-send").show();
         
             $.ajax({
                 type: 'POST',
@@ -86,20 +87,32 @@ $(document).ready(function() {
                     message: $('#details').val()
                 },
                 success: function(response) {
-                    $(".loading-background").hide();
+                    $(".loading-send").hide();
                     
                     if(response.toUpperCase().indexOf('ERROR') >= 0) {
                         alert('error!');
                     }
                     else {
-                        $(".form-response-box").show();
+                        $(".loaded-content").show();
                         if($('input[name="response"]:checked').val() == 'yes') {
                             $(".yes-response").show();
                             // show 'can't wat to see you' message
                             confetti({
-                                particleCount: 100,
-                                spread: 70,
-                                origin: { y: 0.6 },
+                                ...confettiHeartDefaults,
+                                particleCount: 50,
+                                scalar: 2,
+                            });
+
+                            confetti({
+                                ...confettiHeartDefaults,
+                                particleCount: 25,
+                                scalar: 3,
+                            });
+
+                            confetti({
+                                ...confettiHeartDefaults,
+                                particleCount: 10,
+                                scalar: 4,
                             });
                         }
                         else {
@@ -110,6 +123,11 @@ $(document).ready(function() {
                         $('#people').val(2);
                         $('#song').val("");
                         $('#details').val("");
+                        $('input[name="response"]').prop("checked", false);
+
+                        responseSelected = false;
+                        nameEntered = false;
+                        disableButton();
                     }
                 },
                 error: function(xhr, ajaxOptions, thrownError) {

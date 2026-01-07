@@ -148,6 +148,10 @@ a {
     border: 1px solid var(--navy);
     margin-top: .2rem;
     margin-bottom: .2rem;
+    font-family: "Libre Baskerville", roboto;
+}
+.form-container input::placeholder {
+    color: #ccc;
 }
 .form-input label, .form-label {
     text-transform: uppercase;
@@ -224,14 +228,37 @@ label .show-reject, label .show-accept, .inline .show-reject, .inline .show-acce
     background-color: white;
 }
 
+/* RSVP Response*/
+.form-response-box {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
 
-.modal-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.form-response-content {
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--navy);
+    border-radius: 2rem;
+    padding: 1rem;
+    color: var(--navy);
+    width: 70vw;
+    position: fixed;
+    text-align: center;   
 }
-.modal-text {
-    margin-bottom: 1rem;
+.loaded-content {
+    display: none;
 }
+
 .love-brett-beth {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -239,41 +266,12 @@ label .show-reject, label .show-accept, .inline .show-reject, .inline .show-acce
     font-family: "Lavishly Yours", cursive;
 }
 .yes-response, .no-response {
+    margin-top: 2rem;
     display: none;
 }
 
 .text-center {
     text-align: center;
-}
-
-.loading-background {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    display: none;
-}
-
-.loading-container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #6C4D5F;
-    position: fixed;
-}
-
-.loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 .background-fade {
@@ -284,7 +282,23 @@ label .show-reject, label .show-accept, .inline .show-reject, .inline .show-acce
     z-index: -1;
 }
 
-/* RESULTS */
+.close-btn {
+    margin: auto;
+    display: block;
+    padding: 1rem;
+    color: var(--navy);
+    background-color: white;
+    border: 2px solid var(--navy);
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+}
+.close-btn:hover {
+    background-color: var(--navy);
+    color: white;
+}
+
+/* RESULTS - OUR RSVPS */
 .results {
     width: 100%;
     display: inline-block;
@@ -318,93 +332,4 @@ tr.accept-0 td {
 tr.accept-1 td {
     color: #627662;
 }
-.radio-btns {
-    display: flex;
-}
 
-.rd-btn {
-  width: 8rem;
-  height: 3.5rem;
-  position: relative;
-  cursor: pointer;
-}
-
-.rd-btn label,
-.rd-btn input {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.rd-btn label {
-    padding: 5px;
-    border: 1px solid var(--mauve);
-    cursor: pointer;
-    z-index: 1;
-    color: #808080;
-}
-
-.rd-btn label .sub-text {
-    font-size: 14px;
-}
-
-.rd-btn input[type="radio"] {
-  opacity: 0.01;
-  z-index: 100;
-  cursor: pointer;
-}
-
-.rd-btn input[type="radio"] .icon {
-    display: none;
-}
-
-.rd-btn input[type="radio"]:checked+label,
-.Checked+label {
-  background-color: rgba(114, 66, 107, 0.1);
-  border: 2px solid var(--mauve);
-  color: var(--mauve);
-}
-.rd-btn input[type="radio"]:checked .icon {
-    display: block;
-}
-
-.rd-btn input[type="radio"]:hover+label {
-    background-color: var(--mauve);
-    color: white;
-}
-
-.rd-btn .rd-resp-yes {
-    border-radius: 20px 0px 0px 20px;
-}
-.rd-btn .rd-resp-no {
-    border-radius: 0px 20px 20px 0px;
-}
-
-.form-response-box {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    display: none;
-    z-index: 2;
-}
-.form-response-content {
-    background-color: var(--mauve);
-    top: 50%;
-    left: 50%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    border: 1px solid #b08da1;
-    border-radius: .2rem;
-    padding: 1rem;
-    color: white;
-    width: 70vw;
-    position: fixed;
-    text-align: center;   
-}
