@@ -1,20 +1,64 @@
 $(document).ready(function() {
 
+    var responseSelected = false;
+    var nameEntered = false;
+
+    const confettiHeartDefaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["heart"],
+        colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+    };
+
     $(document).on("change", "input[name='response']", function () {
-        console.log("changed!");
+        responseSelected = true;
+        disableButton();
         if($('input[name="response"]:checked').val() == 'yes') {
             confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 },
+                ...confettiHeartDefaults,
+                particleCount: 50,
+                scalar: 2,
             });
+
+            confetti({
+                ...confettiHeartDefaults,
+                particleCount: 25,
+                scalar: 3,
+            });
+
+            confetti({
+                ...confettiHeartDefaults,
+                particleCount: 10,
+                scalar: 4,
+            });
+
+            $(".hide-accept").addClass("show-accept").removeClass("hide-accept");
+            $(".show-reject").addClass("hide-reject").removeClass("show-reject");
         }
+        else {
+            $(".hide-reject").addClass("show-reject").removeClass("hide-reject");
+            $(".show-accept").addClass("hide-accept").removeClass("show-accept");
+        };
+        $(".hide-until-rsvp-selected").addClass("show-rsvp-selected").removeClass("hide-until-rsvp-selected");
     });
 
     
 
     $("#name").on('input', function() {
         if($("#name").val().length != 0) {
+            nameEntered = true;
+        }
+        else {
+            nameEntered = false;
+        }
+        disableButton();
+    });
+
+    function disableButton() {
+        if(responseSelected && nameEntered) {
             $("#send_rsvp_btn").prop('disabled', false);
             $("#send_rsvp_btn").removeClass('disabled');
         }
@@ -22,7 +66,7 @@ $(document).ready(function() {
             $("#send_rsvp_btn").prop('disabled', true);
             $("#send_rsvp_btn").addClass('disabled');
         }
-    });
+    }
 
     $('#send_rsvp_btn').click(function() {
 

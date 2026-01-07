@@ -55,7 +55,7 @@ get_header();
 <div class="baskerville-regular">
     <p>We will officially become <br/>
     <span class="alex-brush lg-font">Mr & Mrs Luffman</span></br>
-    on Thursday 4th June 2026, followed by a small, intimate ceremony the following weekend.</p>
+    on Thursday 4th June 2026, followed by a small, intimate ceremony at the weekend.</p>
     <p>But the real celebration comes a little later...</p>
     <p>On <strong>Saturday 20th June</strong>, we're throwing a big party with all the people who have touched our lives over the years. We'd love for you to come along, share a drink, hit the dance floor, and celebrate this next chapter with us.</p>
 </div>
@@ -126,6 +126,17 @@ get_header();
 <div class="baskerville-regular">
     <p>Children are very welcome.</p>
     <p>We'll also have access to the football fields next to the pavilion, so feel free to bring a ball (and anything else for a bit of fresh air between dances!).</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Can I bring a plus one?
+</div>
+<div class="baskerville-regular">
+    <p>We've addressed invitations by name and tried to include all plus-ones, so we have an idea of numbers.</p>
+    <p>That said, we know life changes! If we've missed a name, please get in touch. We'll always do our best to include partners where possible, we just need to confirm final numbers with the venue.</p>
 </div>
 <div class="floral-page-split">
     <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
@@ -230,7 +241,7 @@ get_header();
     </span>
     <br/>
     <i>
-        Our hero, hailing from the fair shire of Devon, set off on a noble (and slightly overdue) quest to find his fair maiden. 
+        Our hero, hailing from the fair shire of Devon, set off on a noble (and slightly overdue) quest to find his maiden. 
         With a little help from a modern-day matchmaker (because this is the 21st century), his journey led him beyond familiar fields and into the neighbouring land of Somerset.
     </i>
 </p>
@@ -267,85 +278,94 @@ get_header();
     Please let us know if you'll be joining us at our Happily Ever After Party by 30th April 2026
 </p>
 <p class="baskerville-regular">
-    Please RSVP by filling out the form below, or email us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB.
+    <small>
+    Alternatively RSVP via email us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB.
+    </small>
 </p>
 
-<div class="form-container">
+<div class="form-container" id="rsvp">
     <form class="baskerville-regular" id="rsvp_form" novalidate>
         <div class="form-input">
-            <label for="name">Your name(s)</label><br/>
+            <label for="name">Your name(s)*</label>
+            <p><em>If you're bringing a guest and their name isn't on the invitation, please add it here or drop us an email.</em></p>
             <input type="text" name="name" id="name" placeholder="Jane & John Smith or The Johnsons" required>
         </div>
 
-        <p class="form-label">Will you be attending?</p>
+        <p class="form-label">Will you be attending?*</p>
         <div class="form-input radio-input">
             <input type="radio" name="response" id="yes" value="yes">
-            <label for="yes" class="rd-resp-yes text-center">
+            <label for="yes">
                 Joyfully accepting
             </label>
         </div>
         <div class="form-input radio-input">
             <input type="radio" name="response" id="no" value="no">
-            <label for="no" class="rd-resp-yes text-center">
+            <label for="no">
                 Regretfully declining
             </label>
         </div>
-        <div class="form-input">
-            <label for='people'>How many are you RSVP-ing for <em>(Please include anyone)</em></label></br>
+
+        <div class="form-input hide-until-rsvp-selected">
+            <label for='people'>How many people are you <span class="hide-accept">accepting</span><span class="hide-reject">declining</span> for?</label>
+            <p class="inline"><em>Please include everyone <span class="hide-accept">attending with you, including children.</span><span class="hide-reject">in your party unable to attend.</span></em></p>
             <input type="number" min="1" max="10" name="people" id="people" value="2" required>
         </div>
-        <div class="form-input">
-            <p>Will you be joining the party?</p>
-            
-            
-        </div>
-        <div class="form-input">
+        
+        <div class="form-input hide-accept">
             <label for='song'>
                 What tune will get you on the dance floor?
-            </label><br/>
+            </label>
             <input type="text" name="song" id="song">
-            <span class="help-block inria-serif-light-italic">We'll try and add it to the playlist!</span>
         </div>
-        <div class="form-input">
+
+        <div class="form-input hide-until-rsvp-selected">
             <label for='details'>
-                Any extra details, things we should know or a message for us?
-            </label><br/>
+                Leave us a note
+            </label>
+            <p><em>A message, a memory, or question - anything you'd like to share.</em></p>
             <textarea name="details" id="details"></textarea>
         </div>
-        <div class="form-input text-center">
-            <button class="btn inria-serif-regular disabled" type="button" id="send_rsvp_btn">SEND RSVP</button>
+        <div class="form-input rsvp-btn-container">
+            <button class="rsvp-btn baskerville-regular capital-text disabled" type="button" id="send_rsvp_btn">
+                Send RSVP
+            </button>
         </div>
+        <p class="hide-until-rsvp-selected"><em>You can update your response later if needed, just drop us an email: <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a>.</em></p>
     </form>
 </div>
 
-<div class="form-response-box">
-    <div class="form-response-content">
-        <div class="yes-response">
-            <div class="modal-title bacasime-antique-regular">
-                We can't wait to see you!
-            </div>
-            <div class="modal-content inria-serif-regular">
-                Thank you for responding and letting us know you're coming. We're really excited and can't wait to see you there!
-            </div>
-        </div>
-        <div class="no-response">
-            <div class="modal-title bacasime-antique-regular">
-                We'll miss you!
-            </div>
-            <div class="modal-content inria-serif-regular">
-                Thank you for responding and letting us know you not able to come. We will miss you, but hopefully we can catch-up soon!
-            </div>
-        </div>
-        <div class="love-brett-beth">love, </br> The Luffmans</div>
-        <a class="btn inria-serif-regular" id="close-modal" type="button">Close</a>
-    </div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
 </div>
 
-<div class="loading-background">
-    <div class="loading-container">
-        <div class="loader"></div>
-        <div class="bacasime-antique-regular text-center">Sending...</div>
+<div class="form-response-box">
+    <div class="loaded-content">
+        <div class="form-response-content">
+            <div class="yes-response">
+                <div class="modal-title bacasime-antique-regular">
+                    We can't wait to see you!
+                </div>
+                <div class="modal-content inria-serif-regular">
+                    Thank you for responding and letting us know you're coming. We're really excited and can't wait to see you there!
+                </div>
+            </div>
+            <div class="no-response">
+                <div class="modal-title bacasime-antique-regular">
+                    We'll miss you!
+                </div>
+                <div class="modal-content inria-serif-regular">
+                    Thank you for responding and letting us know you not able to come. We will miss you, but hopefully we can catch-up soon!
+                </div>
+            </div>
+            <div class="love-brett-beth">love, </br> The Luffmans</div>
+            <a class="btn inria-serif-regular" id="close-modal" type="button">Close</a>
+        </div>
     </div>
+    <div class="loading-send">
+        <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/sending-gif.webp"/>
+        <p class="baskerville-regular capital-text">Sending...</p>
+    </div>
+    
 </div>
 
 <?php

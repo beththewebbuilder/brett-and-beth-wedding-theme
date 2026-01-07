@@ -50,6 +50,16 @@ Text Domain: buildnbloom
 .floral-border-top img, .floral-page-split, .floral-page-split img {
     width: 100%;
 }
+.floral-page-split img {
+    max-width: 30rem;
+}
+.floral-page-split-sml {
+    width: 100%;
+    text-align: center;
+}
+.floral-page-split-sml img {
+    width: 8rem;
+}
   
 body {
     background-color: white;
@@ -107,6 +117,19 @@ a {
     border: 1px solid var(--navy);
 }
 
+.inline-image {
+    height: 35vh;
+    width: 100%;
+    object-fit: cover;
+}
+@media only screen and (min-width: 500px) {
+  .inline-image {
+        width: 48%;
+        display: inline-block;
+        height: 45vh;
+    }
+}
+
 .form-container {
     padding: 1rem;
     text-align: left;
@@ -129,6 +152,9 @@ a {
 .form-input label, .form-label {
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+.form-input p {
+    margin-top: 5px;
 }
 .radio-input {
     display: flex;
@@ -167,23 +193,37 @@ input[type="radio"]:checked::before{
   background-color: var(--navy);
 }
 
-.rsvp-btn {
-    font-weight: bold;
-    text-decoration: none;
+.hide-until-rsvp-selected, .hide-reject, .hide-accept {
+    display: none;
+}
+.show-rsvp-selected, .show-reject, .show-accept {
+    display: block;
+}
+label .show-reject, label .show-accept, .inline .show-reject, .inline .show-accept {
+    display: inline;
 }
 
-.inline-image {
-    height: 35vh;
-    width: 100%;
-    object-fit: cover;
+.rsvp-btn {
+    display: block;
+    padding: 1rem;
+    background-color: var(--navy);
+    color: white;
+    border-radius: 10px;
+    box-shadow: none;
+    border: 0px;
+    cursor: pointer;
 }
-@media only screen and (min-width: 500px) {
-  .inline-image {
-        width: 48%;
-        display: inline-block;
-        height: 45vh;
-    }
+.rsvp-btn:hover {
+    background-color: var(--navy);
+    color: white;
 }
+.rsvp-btn.disabled, .rsvp-btn.disabled:hover {
+    border: 2px solid #ccc;
+    color: #ccc;
+    cursor: auto;
+    background-color: white;
+}
+
 
 .modal-title {
     font-size: 2rem;
@@ -200,25 +240,6 @@ input[type="radio"]:checked::before{
 }
 .yes-response, .no-response {
     display: none;
-}
-
-.btn {
-    padding: .5rem;
-    border: 2px solid var(--mauve);
-    background-color: white;
-    color: var(--mauve);
-    display: block;
-    cursor: pointer;
-}
-.btn:hover {
-    background-color: var(--mauve);
-    color: white;
-}
-.btn.disabled, .btn.disabled:hover {
-    border-color: #ccc;
-    color: #ccc;
-    cursor: auto;
-    background-color: white;
 }
 
 .text-center {
