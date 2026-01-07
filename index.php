@@ -42,127 +42,261 @@ get_header();
     <span class="baskerville-regular">late</span>
 </div>
 
-<div class="floral-page-split">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
-</div>
 <div class="rsvp-btn-container">
     <a href="#rsvp" class="rsvp-here-btn baskerville-regular capital-text">
-        RSVP
+        RSVP here
     </a>
+</div>
+
+<div class="floral-bouquet">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-bouquet.png"/>
+</div>
+
+<div class="baskerville-regular">
+    <p>We will officially become <br/>
+    <span class="alex-brush lg-font">Mr & Mrs Luffman</span></br>
+    on Thursday 4th June 2026, followed by a small, intimate ceremony the following weekend.</p>
+    <p>But the real celebration comes a little later...</p>
+    <p>On <strong>Saturday 20th June</strong>, we're throwing a big party with all the people who have touched our lives over the years. We'd love for you to come along, share a drink, hit the dance floor, and celebrate this next chapter with us.</p>
 </div>
 <div class="floral-page-split">
     <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
 </div>
 
-<div class="text-content">
-
-
-    <div class="main-text inria-serif-regular">
-        <p>We’re having an intimate ceremony and officially becoming Mr & Mrs Luffman on Thursday 4th June 2026.</p>
-        <p>But the real celebration comes a little later; on <strong>Saturday 20th June</strong>, we’re throwing a big party with all the people who have touched our lives over the years.
-        We’d love for you to come, share a drink, hit the dance floor, and celebrate this next chapter with us.</p>
-        <p>We’ll be cutting the cake at 7.30pm and then heading straight into our first dance — so if you don’t want to miss those moments, be sure to join us by then!</p>
-    </div>
+<div class="baskerville-regular capital-text lg-font">
+    What time should I arrive?
 </div>
-<div class="text-content">
-    <div class="text-header">
-        How to get there
-    </div>
-    <div class="main-text inria-serif-regular">
-        Magelake Pavilion is just outside the village of Uffculme, about 5 minutes from Junction 27 (Tiverton exit) on the M5, and there’s plenty of parking on site.
-        <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/sZt559TWm2kn64sv7?g_st=aw">Magelake Pavilion and Recreation Ground, Culmstock Road, Uffculme, Devon, EX15 3DR</a></p>
-        <p><strong>what3words:</strong> <a href="https://w3w.co/jumbo.blazed.bake">///jumbo.blazed.bake</a></p>
-    </div>
+<div class="baskerville-regular">
+    <p>You're very welcome to arrive any time from 6.30pm. We're planning to cut the cake at 7.30pm, followed straight away by our first dance to open up the disco.</p>
+    <p>If you don't want to miss those moments, be sure to join us by then!</p>
 </div>
-<div class="text-content">
-    <div class="text-header">
-        Staying nearby
-    </div>
-    <div class="main-text inria-serif-regular">
-        If you're planning to party into the night (and we really hope you are!), there are a few options to stay close by:
-        <p><a href="https://www.premierinn.com/gb/en/hotels/england/devon/tiverton/tiverton.html?cid=GLBC_TIVTHY">Premier Inn Tiverton</a> <span class="sub-text inria-serif-light-italic">15 minutes away</span></p>
-        <p><a href="https://www.padbrookpark.co.uk/">Padbrook Park Hotel</a> <span class="sub-text inria-serif-light-italic">13 minutes away</span></p>
-        <p><a href="https://www.travelodge.co.uk/hotels/102/Tiverton-hotel?WT.tsrc=GHA_Organic&utm_campaign=GHA_Tiverton&utm_medium=GHA_Organic&utm_source=google">Travelodge Tiverton</a> <span class="sub-text inria-serif-light-italic">11 minutes away</span></p>
-        <p><a href="https://www.weirmill-devon.co.uk/">Weir Mill Farm Bed & Breakfast</a> <span class="sub-text inria-serif-light-italic">7 minutes away</span></p>
-    </div>
-</div>
-<div class="text-content">
-    <div class="text-header">
-        Taxis
-    </div>
-    <div class="main-text inria-serif-regular">
-        Local taxis are available, but we'd recommend booking in advance for the evening.
-        If you're catching a lift home, don't worry — cars can be left overnight at the Pavilion, ready for collection the next morning (hopefully along with your dancing shoes).
-        <p><a href="https://www.jollyjauntstaxis.co.uk/">Jolly Jaunts Taxis</a> - <a href="tel:01884840979">01884 840979</a></p>
-        <p><a href="http://www.taxidevon.co.uk/">Parkway Taxis</a> - <a href="tel:0188438899">01884 38899</a></p>
-        <p><a href="https://www.devontransfers.co.uk/">Devon Transfers Private Hire</a> - <a href="tel:07425262087">07425262087</a></p>
-    </div>
-</div>
-<div class="text-content">
-    <div class="text-header">
-        Things to know
-    </div>
-    <div class="main-text inria-serif-regular">
-        The pavilion has 2 bars and we have organised for <a href="https://www.instagram.com/nomads_bbq">NomadsBBQ</a> to bring their food truck serving their <em>amazing</em> smoked brisket and pork and fries, so bring along some cash/card for food and drinks!
-    </div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
 </div>
 
-<div class="text-content">
-    <div class="text-header">
-        Our Story
-    </div>
-    <div class="main-text inria-serif-regular">
-        <p>We didn't have the classic <i>"meet-cute"</i> that all of Beth's romcom marathons had prepared her for. Instead, like 10% of other married couples in the UK <span class="inria-serif-light-italic">(according to Google!)</span>, we met online. Yes — Facebook Dating really is a thing, and it worked for us!</p>
-        <p>We clicked straight away, chatting about TV binges, favourite foods, and our shared love of the countryside <span span class="inria-serif-light-italic">(for Brett, Devon in particular!)</span>.</p>
-        <p>We met in person for the first time in February 2023 and we both knew we'd stumbled onto something special. A few dates later, Brett introduced Beth to the other leading lady in his life, Heidi, and it was love at first sight all round.</p>
-        <p>Fast forward to August 2025: the three of us set off on a Lake District adventure, doing what we love most together — hiking. On one of the very first days, we took on Skiddaw. At 3,000 feet, Brett got down on one knee... and the rest, as they say, is history.</p>
-    </div>
+<div class="baskerville-regular capital-text lg-font">
+    Will there be food and drink?
+</div>
+<div class="baskerville-regular">
+    <p>Yes! The venue has two bars, and <a href="https://www.instagram.com/nomads_bbq">NomadsBBQ</a> will be on site with their food truck serving their <em>amazing</em> smoked brisket, pork, and loaded fries.</p>
+    <p>And of course, there will be cake!</p>
+    <p>Food and drinks will be available to purchase, so please bring cash or card.</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
 </div>
 
+<div class="baskerville-regular capital-text lg-font">
+    How do I get to the venue?
+</div>
+<div class="baskerville-regular">
+    <p>The celebration will be held at <a href="https://maps.app.goo.gl/24S2qWyveQHYLN8JA">Magelake Pavilion</a>, just outside the village of Uffculme. The Pavilion is around five minutes from Junction 27 (Tiverton exit) on the M5.</p>
+    <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/sZt559TWm2kn64sv7?g_st=aw">Magelake Pavilion and Recreation Ground, Culmstock Road, Uffculme, Devon, EX15 3DR</a></p>
+    <p><strong>what3words:</strong> <a href="https://w3w.co/jumbo.blazed.bake">///jumbo.blazed.bake</a></p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Is there parking?
+</div>
+<div class="baskerville-regular">
+    <p>Yes. There is on-site parking for approximately 90 cars, so plenty of space available.</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Is there a dress code?
+</div>
+<div class="baskerville-regular">
+    <p>There is no strict dress code.</p>
+    <p>Think party-ready, comfortable, but most importantly something you'll enjoy dancing in.</p>
+    <p>We'll be in our wedding outfits, as will our attendants, so feel free to dress up if you like!</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Are children welcome?
+</div>
+<div class="baskerville-regular">
+    <p>Children are very welcome.</p>
+    <p>We'll also have access to the football fields next to the pavilion, so feel free to bring a ball (and anything else for a bit of fresh air between dances!).</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Gifts
+</div>
+<div class="baskerville-regular">
+    <p>Please don't feel you need to bring a gift — having you there is what matters most.</p>
+    <p>If you'd like to do something, kind words, a card, or simply joining us on the dance floor means more than enough.
+    We're not having a photographer (only a videographer), so a wonderful 'gift' would be snapping a few fun photos during the night and sharing them with us afterwards.</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Will there be somewhere to sit if I need a break from dancing?
+</div>
+<div class="baskerville-regular">
+    <p>There will be seating available both inside and outside (weather permitting).</p>
+    <p>The pavilion has two rooms: one will be the main disco room, and the other will be a quieter space for chatting, relaxing, or for anyone who fancies a break from the dance floor.</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    What time will the party finish?
+</div>
+<div class="baskerville-regular">
+    <p>The celebration will run until late. Music will finish at <strong>1.00am</strong>, so we'll be dancing up until the very end!</p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Taxis & getting home
+</div>
+<div class="baskerville-regular">
+    <p>We'd recommend booking taxis in advance if you think you'll need one (it's a little rural).</p>
+    <p>If anyone gets carried away, cars can be left overnight at the pavilion and collected the next day.</p>
+    <p>A couple options:</p>
+    <p>
+        <a href="https://www.jollyjauntstaxis.co.uk/">Jolly Jaunts Taxis</a> - <a href="tel:01884840979">01884 840979</a>
+        </br>
+        <a href="http://www.taxidevon.co.uk/">Parkway Taxis</a> - <a href="tel:0188438899">01884 38899</a>
+        </br>
+        <a href="https://www.devontransfers.co.uk/">Devon Transfers Private Hire</a> - <a href="tel:07425262087">07425262087</a>
+    </p>
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+
+<div class="baskerville-regular capital-text lg-font">
+    Is there accommodation nearby?
+</div>
+<div class="baskerville-regular">
+    <p>There are several hotels and B&Bs nearby, in and around the local area.</p>
+    <p>These are a few options:</p>
+    <p>
+        <a href="https://www.weirmill-devon.co.uk/">Weir Mill Farm Bed & Breakfast</a> <span class="alex-brush">7 minutes away</span>
+        <br/>
+        <a href="https://www.travelodge.co.uk/hotels/102/Tiverton-hotel?WT.tsrc=GHA_Organic&utm_campaign=GHA_Tiverton&utm_medium=GHA_Organic&utm_source=google">Travelodge Tiverton</a> <span class="alex-brush">11 minutes away</span>
+        <br/>
+        <a href="https://www.padbrookpark.co.uk/">Padbrook Park Hotel</a> <span class="alex-brush">13 minutes away</span>
+        <br/>
+        <a href="https://www.premierinn.com/gb/en/hotels/england/devon/tiverton/tiverton.html?cid=GLBC_TIVTHY">Premier Inn Tiverton</a> <span class="alex-brush">15 minutes away</span>
+    </p>    
+</div>
+<div class="floral-page-split">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-page-split.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Any other questions?
+</div>
+<div class="baskerville-regular">
+    <p>If there's anything we haven't covered, just drop us an email at </br> <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a>.</p>
+</div>
+
+<div class="rsvp-btn-container">
+    <a href="#rsvp" class="rsvp-here-btn baskerville-regular capital-text">
+        RSVP here
+    </a>
+</div>
+
+<div class="floral-bouquet">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-bouquet.png"/>
+</div>
+
+<div class="baskerville-regular capital-text lg-font">
+    Our Story
+</div>
+<p class="baskerville-regular">
+    <span class="alex-brush xl-font">
+        Once upon a time...
+    </span>
+    <br/>
+    <i>
+        Our hero, hailing from the fair shire of Devon, set off on a noble (and slightly overdue) quest to find his fair maiden. 
+        With a little help from a modern-day matchmaker (because this is the 21st century), his journey led him beyond familiar fields and into the neighbouring land of Somerset.
+    </i>
+</p>
+<p class="baskerville-regular">
+    There was no dramatic meet-cute, no accidental coffee spill, and no running through airports. Instead, there were messages, memes, and the surprising discovery that Facebook Dating actually works.
+</p>
+<p class="baskerville-regular">
+    We met in February 2023 and clicked straight away, chatting about TV binges, favourite foods, and our shared love of the countryside (particularly Devon, for Brett). We both had that rare feeling that something important was beginning.
+</p>
+<p class="baskerville-regular">
+    A few dates later, Brett introduced Beth to the other leading lady in his life, Heidi, and it was love at first sight all round.
+</p>
+<p class="baskerville-regular">
+    Fast forward to August 2025. On a Lake District adventure, doing what we love most together, we set off hiking. On one of the very first days, at the summit of Skiddaw, Brett got down on one knee…</p>
+</p>
+<p class="baskerville-regular">
+    And so, dear friends, the next chapter begins — and we'd love you to help us celebrate it at our
+    </br>
+    <span class="alex-brush xl-font">happily ever after</span> party.
+</p>
 <div class="images text-center">
     <img class="inline-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/proposal.jpg"/>
     <img class="inline-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/ring.jpg"/>
 </div>
 
-<div class="text-content" id="rsvp">
-    <div class="text-header">
-        RSVP
-    </div>
-    <div class="main-text inria-serif-regular">
-        We would love for you to join us to celebrate this next step. 
-    </div>
-    <div class="inria-serif-light-italic">
-        Please let us know if you can make it or not by filling out the form below or emailing us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a>
-    </div>
+<div class="floral-bouquet">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-bouquet.png"/>
 </div>
+
+<div class="baskerville-regular capital-text lg-font">
+    RSVP
+</div>
+<p class="baskerville-regular form-label">
+    Please let us know if you'll be joining us at our Happily Ever After Party by 30th April 2026
+</p>
+<p class="baskerville-regular">
+    Please RSVP by filling out the form below, or email us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB.
+</p>
+
 <div class="form-container">
-    <form class="inria-serif-regular" id="rsvp_form" novalidate>
+    <form class="baskerville-regular" id="rsvp_form" novalidate>
         <div class="form-input">
             <label for="name">Your name(s)</label><br/>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" placeholder="Jane & John Smith or The Johnsons" required>
+        </div>
+
+        <p class="form-label">Will you be attending?</p>
+        <div class="form-input radio-input">
+            <input type="radio" name="response" id="yes" value="yes">
+            <label for="yes" class="rd-resp-yes text-center">
+                Joyfully accepting
+            </label>
+        </div>
+        <div class="form-input radio-input">
+            <input type="radio" name="response" id="no" value="no">
+            <label for="no" class="rd-resp-yes text-center">
+                Regretfully declining
+            </label>
         </div>
         <div class="form-input">
-            <label for='people'>Number of people you're RSVP-ing for <span class="inria-serif-light-italic">(Don't forget to include yourself!)</span></label></br>
+            <label for='people'>How many are you RSVP-ing for <em>(Please include anyone)</em></label></br>
             <input type="number" min="1" max="10" name="people" id="people" value="2" required>
         </div>
         <div class="form-input">
             <p>Will you be joining the party?</p>
-            <div class="radio-btns">
-                <div class="rd-btn">
-                    <input type="radio" name="response" id="yes" value="yes" checked>
-                    <label for="yes" class="rd-resp-yes text-center">
-                        <div class="inria-serif-bold"><span class="icon">🥳<span> Yes</div>
-                        <span class="inria-serif-light-italic sub-text">wouldn't miss it!</span>
-                    </label>
-                </div>
-                <div class="rd-btn">
-                    <input type="radio" name="response" id="no" value="no">
-                    <label for="no" class="rd-resp-no text-center">
-                        <div class="inria-serif-bold"><span class="icon">🥺<span> Sorry</div>
-                        <span class="inria-serif-light-italic sub-text">can't make it</span>
-                    </label>
-                </div>
-            </div>
+            
             
         </div>
         <div class="form-input">

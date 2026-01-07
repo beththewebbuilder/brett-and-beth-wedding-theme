@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+    $(document).on("change", "input[name='response']", function () {
+        console.log("changed!");
+        if($('input[name="response"]:checked').val() == 'yes') {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+            });
+        }
+    });
+
+    
+
     $("#name").on('input', function() {
         if($("#name").val().length != 0) {
             $("#send_rsvp_btn").prop('disabled', false);

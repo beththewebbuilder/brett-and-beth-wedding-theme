@@ -38,6 +38,15 @@ Text Domain: buildnbloom
     left: 0;
     position: absolute;
 }
+.floral-bouquet {
+    height: 6rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.floral-bouquet img {
+    height: 100%;
+}
 .floral-border-top img, .floral-page-split, .floral-page-split img {
     width: 100%;
 }
@@ -64,6 +73,9 @@ a {
 .lg-font {
     font-size: 1.5rem;
 }
+.xl-font {
+    font-size: 3rem;
+}
 .additional {
     font-size: 1.5rem;
 }
@@ -77,10 +89,11 @@ a {
 }
 
 .rsvp-btn-container {
-    height: 2rem;
+    margin-top: 2rem;
 }
 
 .rsvp-here-btn {
+    display: block;
     padding: 1rem;
     background-color: var(--navy);
     color: white;
@@ -91,13 +104,7 @@ a {
 .rsvp-here-btn:hover {
     color: var(--navy);
     background-color: white;
-}
-
-
- /* OLD */
-.text-header {
-    font-family: "Lavishly Yours", cursive;
-    font-size: 2.5rem;
+    border: 1px solid var(--navy);
 }
 
 .form-container {
@@ -105,7 +112,6 @@ a {
     text-align: left;
     max-width: 600px;
     margin: auto;
-    background-color: rgba(255,255,255,0.6);
 }
 .form-container .form-input {
     margin-bottom: 2rem;
@@ -116,27 +122,49 @@ a {
     font-size: 1rem;
     padding: .5rem;
     border-radius: .2rem;
-    border: 1px solid var(--mauve);
+    border: 1px solid var(--navy);
     margin-top: .2rem;
     margin-bottom: .2rem;
 }
-
-.invited-text {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-family: "Passions Conflict", cursive;
-    font-weight: 400;
-    font-style: normal;
+.form-input label, .form-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.radio-input {
+    display: flex;
+}
+.radio-input label {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1rem;
+    text-transform: none;
 }
 
-.invite-text {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+input[type="radio"]{
+   appearance: none;
+   border: 2px solid var(--navy);
+   width: 30px;
+   height: 30px;
+   content: none;
+   outline: none;
+   margin: 0;
 }
 
-.main-text {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+input[type="radio"]:checked {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  content: none;
+  border: none;
+}
+
+input[type="radio"]:checked::before{
+  position: absolute;
+  color: white !important;
+  content: "\00A0\2713\00A0" !important;
+  font-weight: bolder;
+  font-size: 21px;
+  background-color: var(--navy);
 }
 
 .rsvp-btn {
