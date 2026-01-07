@@ -323,13 +323,25 @@ label .show-reject, label .show-accept, .inline .show-reject, .inline .show-acce
 table {
     width: 100%;
 }
-th {
-    text-align: left;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 tr.accept-0 td {
-    color: #bb7381;
+    color: grey;
 }
 tr.accept-1 td {
-    color: #627662;
+    color: var(--navy);
 }
 

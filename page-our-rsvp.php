@@ -9,14 +9,18 @@ $allResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_response" );
 
 ?>
 
-<div class="background-fade"></div>
-
-<div class="header-txt bacasime-antique-regular text-center">
-    Brett & Beth
+<div class="floral-border-top">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-border-top.png"/>
 </div>
 
-<div class="result-num bacasime-antique-regular text-center">
-    We have had a total of <em><?php echo $totalResponse; ?></em> responses from the <em>255</em> we sent out
+<div class="names">
+    <div class="baskerville-regular capital-text lg-font">
+        Brett & Beth Party RSVPs
+    </div>
+    <p class="baskerville-regular">
+        We have had a total of <strong><?php echo $totalResponse;?></strong>
+        responses from the <strong>255</strong> we sent out.
+    </p>
 </div>
 
 </br>
@@ -24,19 +28,19 @@ $allResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_response" );
 <div class="results">
     <div class="yes-results">
         <div class="title">🥳</div>
-        <div class="result-desc inria-serif-regular">We've got</div>
-        <div class="result-num bacasime-antique-regular">
+        <div class="result-desc baskerville-regular">We've got</div>
+        <div class="result-num baskerville-regular">
             <?php echo $yesResponse; ?>
         </div>
-        <div class="result-desc inria-serif-regular">coming to our party!</div>
+        <div class="result-desc baskerville-regular">coming to our party!</div>
     </div>
     <div class="no-results">
         <div class="title">😔</div>
-        <div class="result-desc inria-serif-regular">There are</div>
-        <div class="result-num bacasime-antique-regular">
+        <div class="result-desc baskerville-regular">There are</div>
+        <div class="result-num baskerville-regular">
             <?php echo $noResponse; ?>
         </div>
-        <div class="result-desc inria-serif-regular">losers not coming!</div>
+        <div class="result-desc baskerville-regular">losers not coming!</div>
     </div>
 </div>
 
