@@ -80,6 +80,12 @@ a {
     font-size: 1.5rem;
     margin-top: 17%;
 }
+.weekend-top{
+    margin-top: 17%;
+}
+.sm-font {
+    font-size: .7rem;
+}
 .lg-font {
     font-size: 1.5rem;
 }
@@ -89,7 +95,9 @@ a {
 .additional {
     font-size: 1.5rem;
 }
-
+.margin-1 {
+    margin-top: 1rem;
+}
 .party {
     margin-top: 1rem;
     font-size: 4rem;
