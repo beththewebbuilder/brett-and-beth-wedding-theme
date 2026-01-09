@@ -265,9 +265,9 @@ $(document).ready(function() {
             
 
             //Staying both nights//
-            var stayingBothNights = true
-            if($("input[name='weekend-stay']").val() != "yes") {
-                stayingBothNights = false;
+            var stayingBothNights = false
+            if($("input[name='weekend-stay']:checked").val() == "yes") {
+                stayingBothNights = true;
             }
             
             $.ajax({

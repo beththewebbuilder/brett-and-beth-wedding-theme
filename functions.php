@@ -168,7 +168,7 @@ function save_weekend_rsvp() {
             </head>
             <body>
             <h2>Wedding RSVP</h2>
-            <p>" . $_POST['name'] . $_POST['acceptText'] . "!</p>
+            <p>" . $_POST['name'] ." ". $_POST['acceptText'] . "!</p>
             <p><strong>Staying both nights:</strong> ". $_POST['stayBothNights'] . " <em>". $_POST['stayDetails'] ."</em></p>
             <p><strong>Message:</strong> ". $_POST['message'] ."</p>
             <p><strong>Dietary requirements:</strong> ". $_POST['dietary_requirements'] . ": " . $_POST['dietaryDetails'] ."</p>
