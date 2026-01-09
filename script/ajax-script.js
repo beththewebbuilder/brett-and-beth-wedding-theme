@@ -1,8 +1,4 @@
 $(document).ready(function() {
-
-    var responseSelected = false;
-    var nameEntered = false;
-
     const confettiHeartDefaults = {
         spread: 360,
         ticks: 100,
@@ -13,28 +9,35 @@ $(document).ready(function() {
         colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
     };
 
+    function runHeartConfetti() {
+        confetti({
+            ...confettiHeartDefaults,
+            particleCount: 50,
+            scalar: 2,
+        });
+
+        confetti({
+            ...confettiHeartDefaults,
+            particleCount: 25,
+            scalar: 3,
+        });
+
+        confetti({
+            ...confettiHeartDefaults,
+            particleCount: 10,
+            scalar: 4,
+        });
+    }
+
+    // PARTY SCRIPT - START //
+    var responseSelected = false;
+    var nameEntered = false;
+
     $(document).on("change", "input[name='response']", function () {
         responseSelected = true;
         disableButton();
         if($('input[name="response"]:checked').val() == 'yes') {
-            confetti({
-                ...confettiHeartDefaults,
-                particleCount: 50,
-                scalar: 2,
-            });
-
-            confetti({
-                ...confettiHeartDefaults,
-                particleCount: 25,
-                scalar: 3,
-            });
-
-            confetti({
-                ...confettiHeartDefaults,
-                particleCount: 10,
-                scalar: 4,
-            });
-
+            runHeartConfetti();
             $(".hide-accept").addClass("show-accept").removeClass("hide-accept");
             $(".show-reject").addClass("hide-reject").removeClass("show-reject");
         }
@@ -44,8 +47,6 @@ $(document).ready(function() {
         };
         $(".hide-until-rsvp-selected").addClass("show-rsvp-selected").removeClass("hide-until-rsvp-selected");
     });
-
-    
 
     $("#name").on('input', function() {
         if($("#name").val().length != 0) {
@@ -137,6 +138,85 @@ $(document).ready(function() {
         }
         return false;
     });
+    // PARTY SCRIPT - END //
+
+    // WEEKEND SCRIPT - START //
+    var weekendNameEntered = false;
+    var weekendResponseSelected = false;
+    var dietaryNoneSelected = true;
+
+    $(document).on("change", "input[name='weekend-response']", function() {
+        weekendResponseSelected = true;
+        disableWeekendButton();
+        var response = $('input[name="weekend-response"]:checked').val();
+
+        if(response.indexOf('yes') >= 0 ) {
+            runHeartConfetti();
+            $(".hide-accept").addClass("show-accept").removeClass("hide-accept");
+            $(".weekend-only-hide").addClass("weekend-only-show").removeClass("weekend-only-hide");
+            $(".party-only-hide").addClass("party-only-show").removeClass("party-only-hide");
+
+            $(".show-reject").addClass("hide-reject").removeClass("show-reject");
+        }
+
+        if(response == 'yes-weekend-only') {
+            $(".weekend-only-hide").addClass("weekend-only-show").removeClass("weekend-only-hide");
+            $(".party-only-show").addClass("party-only-hide").removeClass("party-only-show");
+        }
+        if(response == 'yes-party-only') {
+            $(".party-only-hide").addClass("party-only-show").removeClass("party-only-hide");
+            $(".weekend-only-show").addClass("weekend-only-hide").removeClass("weekend-only-show");
+        }
+        if(response == 'no') {
+            $(".hide-reject").addClass("show-reject").removeClass("hide-reject");
+            $(".show-accept").addClass("hide-accept").removeClass("show-accept");
+            $(".party-only-show").addClass("party-only-hide").removeClass("party-only-show");
+            $(".weekend-only-show").addClass("weekend-only-hide").removeClass("weekend-only-show");
+        }
+
+        $(".hide-until-rsvp-selected").addClass("show-rsvp-selected").removeClass("hide-until-rsvp-selected");
+    });
+
+    $("#weekend-name").on('input', function() {
+        if($("#weekend-name").val().length > 0) {
+            weekendNameEntered = true;
+        }
+        else {
+            weekendNameEntered = false;
+        }
+        disableWeekendButton();
+    });
+
+    function disableWeekendButton() {
+        if(weekendResponseSelected && weekendNameEntered) {
+            $("#send_weekend_rsvp_btn").prop('disabled', false);
+            $("#send_weekend_rsvp_btn").removeClass('disabled');
+        }
+        else {
+            $("#send_weekend_rsvp_btn").prop('disabled', true);
+            $("#send_weekend_rsvp_btn").addClass('disabled');
+        }
+    }
+
+    $(document).on("change", "input[name='weekend-dietary']", function() {
+        var checkedBoxes$ = $('input[name="weekend-dietary"]:checked');
+        
+        if(checkedBoxes$.length < 1) {
+            dietaryNoneSelected = true;
+            $('#dietary-none').prop("checked", true);
+        }
+        
+        checkedBoxes$.each(function(index, value){
+            this.id != 'none';
+            dietaryNoneSelected = false;
+            $('#dietary-none').prop("checked", false);
+        });
+    });
+
+    $('#send_weekend_rsvp_btn').click(function() {
+
+    })
+    // WEEKEND SCRIPT - END //
 
     $("#close-modal").click(function() {
         $(".yes-response").hide();

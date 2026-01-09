@@ -6,19 +6,20 @@ get_header();
     <img src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-border-top.png"/>
 </div>
 
-<div class="names">
-    <div class="baskerville-regular capital-text name">
+<div class="weekend-top">
+    <div class="baskerville-regular capital-text sm-font">
+        Together with their families
+    </div>
+    <div class="alex-brush xl-font">
         Brett Luffman
     </div>
-    <div class="alex-brush additional">
-        and
-    </div>
-    <div class="baskerville-regular capital-text name">
+    <div class="alex-brush lg-font">and</div>
+    <div class="alex-brush xl-font">
         Bethany Fowler
     </div>
 </div>
 
-<div class="baskerville-regular">
+<div class="baskerville-regular capital-text sm-font">
     warmly invite you to join them in celebrating their marriage at their 
 </div>
 
@@ -32,7 +33,8 @@ get_header();
 </div>
 
 <div class="alex-brush additional">at</div>
-<div class="baskerville-regular capital-text"><a href="https://maps.app.goo.gl/24S2qWyveQHYLN8JA">Magelake Parish Pavilion, Uffculme </br> EX15 3DP</a></div>
+<div class="baskerville-regular capital-text"><a href="https://maps.app.goo.gl/24S2qWyveQHYLN8JA">Magelake Parish Pavilion</a></div>
+<div class="baskerville-regular capital-text sm-font">Uffculme, EX15 3DP</div>
 <div class="alex-brush additional">on</div>
 <div class="baskerville-regular capital-text lg-font">Sat 20 Jun 2026</div>
 <div>
@@ -308,7 +310,7 @@ get_header();
 
         <div class="form-input hide-until-rsvp-selected">
             <label for='people'>How many people are you <span class="hide-accept">accepting</span><span class="hide-reject">declining</span> for?</label>
-            <p class="inline"><em>Please include everyone <span class="hide-accept">attending with you, including children.</span><span class="hide-reject">in your party unable to attend.</span></em></p>
+            <p class="inline"><em><small>Please include everyone <span class="hide-accept">attending with you, including children.</span><span class="hide-reject">in your party unable to attend.</span></small></em></p>
             <input type="number" min="1" max="10" name="people" id="people" value="2" required>
         </div>
         
@@ -323,7 +325,7 @@ get_header();
             <label for='details'>
                 Leave us a note
             </label>
-            <p><em>A message, a memory, or question - anything you'd like to share.</em></p>
+            <p><em><small>A message, a memory, or question - anything you'd like to share.</small></em></p>
             <textarea name="details" id="details"></textarea>
         </div>
         <div class="form-input rsvp-btn-container">
@@ -331,7 +333,7 @@ get_header();
                 Send RSVP
             </button>
         </div>
-        <p class="hide-until-rsvp-selected"><em>You can update your response later if needed, just drop us an email: <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a>.</em></p>
+        <p class="hide-until-rsvp-selected"><small><em>You can update your response later if needed, just drop us an email: <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a>.</em></small></p>
     </form>
 </div>
 

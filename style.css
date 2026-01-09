@@ -60,6 +60,12 @@ Text Domain: buildnbloom
 .floral-page-split-sml img {
     width: 8rem;
 }
+img.border-side {
+    width: 6rem;
+}
+img.border-side.border-right {
+    transform: rotate(0.5turn);
+}
   
 body {
     background-color: white;
@@ -75,7 +81,9 @@ body {
 a {
     color: var(--navy);
 }
-
+.text-left {
+    text-align: left;
+}
 .names {
     font-size: 1.5rem;
     margin-top: 17%;
@@ -97,6 +105,9 @@ a {
 }
 .margin-1 {
     margin-top: 1rem;
+}
+hr {
+    border-color: var(--navy);
 }
 .party {
     margin-top: 1rem;
@@ -165,20 +176,29 @@ a {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+.form-input.checkbox-input {
+    margin-bottom: 0px;
+    display: flex;
+    margin-bottom: .5rem;
+}
 .form-input p {
     margin-top: 5px;
+}
+.dietary-checkbox-group {
+    margin-bottom: 2rem;
 }
 .radio-input {
     display: flex;
 }
-.radio-input label {
+.radio-input label, .checkbox-input label {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 1rem;
     text-transform: none;
+    flex-shrink: 10;
 }
 
-input[type="radio"]{
+input[type="radio"], input[type="checkbox"]{
    appearance: none;
    border: 2px solid var(--navy);
    width: 30px;
@@ -188,7 +208,7 @@ input[type="radio"]{
    margin: 0;
 }
 
-input[type="radio"]:checked {
+input[type="radio"]:checked, input[type="checkbox"]:checked {
   appearance: none;
   outline: none;
   padding: 0;
@@ -196,7 +216,7 @@ input[type="radio"]:checked {
   border: none;
 }
 
-input[type="radio"]:checked::before{
+input[type="radio"]:checked::before, input[type="checkbox"]:checked::before{
   position: absolute;
   color: white !important;
   content: "\00A0\2713\00A0" !important;
@@ -205,10 +225,10 @@ input[type="radio"]:checked::before{
   background-color: var(--navy);
 }
 
-.hide-until-rsvp-selected, .hide-reject, .hide-accept {
+.hide-until-rsvp-selected, .hide-reject, .hide-accept, .weekend-only-hide, .party-only-hide {
     display: none;
 }
-.show-rsvp-selected, .show-reject, .show-accept {
+.show-rsvp-selected, .show-reject, .show-accept, .weekend-only-show, .party-only-show {
     display: block;
 }
 label .show-reject, label .show-accept, .inline .show-reject, .inline .show-accept {
@@ -351,3 +371,17 @@ tr.accept-1 td {
     color: var(--navy);
 }
 
+/* WEEKEND PAGE */
+.and-page-break {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 1px solid var(--navy);
+    border-bottom: 1px solid var(--navy);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.and-page-break .and-text {
+    padding-left: 6px;
+}
