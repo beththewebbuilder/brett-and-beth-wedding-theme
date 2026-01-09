@@ -21,9 +21,9 @@ get_header();
 <div class="margin-1">
     <span class="baskerville-regular capital-text lg-font">Friday 5th</span>
     <span class="alex-brush lg-font">to</span>
-    <span class="baskerville-regular capital-text lg-font">Sunday 7th June 2026</span></br>
-    <span class="alex-brush lg-font">at</span></br>
-    <span class="baskerville-regular capital-text"><a href="https://maps.app.goo.gl/SR8cTgCmtWMvd39s8">Tonedale House</a></span></br>
+    <span class="baskerville-regular capital-text lg-font">Sunday 7th June 2026</span><br/>
+    <span class="alex-brush lg-font">at</span><br/>
+    <span class="baskerville-regular capital-text"><a href="https://maps.app.goo.gl/SR8cTgCmtWMvd39s8">Tonedale House</a></span><br/>
     <span class="baskerville-regular capital-text sm-font">Wellington, TA21 0EZ</span>
 </div>
 
@@ -239,9 +239,9 @@ get_header();
     Please let us know if you'll be joining us for our celebrations
 </p>
 <p class="baskerville-regular">
-    Please RSVP by 30th April 2026 </br>
+    Please RSVP by 30th April 2026 <br/>
     <small>
-    Alternatively RSVP via email us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB
+    Alternatively, you can RSVP by email at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB
     </small>
 </p>
 
@@ -252,24 +252,27 @@ get_header();
             <input type="text" name="weekend-name" id="weekend-name" placeholder="e.g. Jane & John" required>
         </div>
 
-        <p class="form-label">Will you be attending?*</p>
-        <p>Joyfully accepting:
+        <div class="form-input">
+            <hr/>
+        </div>
+
+        <p class="form-label">Which celebrations will you be joining us for?*</p>
         <div class="form-input radio-input">
             <input type="radio" name="weekend-response" id="yes-all" value="yes-all">
             <label for="yes-all">
-                <strong>both</strong> the Wedding Weekend & Happily Ever After Party
+                <strong>Both</strong> the Wedding Weekend & Happily Ever After Party
             </label>
         </div>
         <div class="form-input radio-input">
             <input type="radio" name="weekend-response" id="yes-weekend-only" value="yes-weekend-only">
             <label for="yes-weekend-only">
-                <strong>only</strong> the Wedding Weekend 
+                <strong>Wedding Weekend only</strong>
             </label>
         </div>
         <div class="form-input radio-input">
             <input type="radio" name="weekend-response" id="yes-party-only" value="yes-party-only">
             <label for="yes-party-only">
-                <strong>only</strong> the Happily Ever After Party
+                <strong>Happily Ever After Party only</strong>
             </label>
         </div>
         <div class="form-input radio-input">
@@ -279,55 +282,78 @@ get_header();
             </label>
         </div>
 
-        <div class="form-input hide-until-rsvp-selected">
-            <label for='weekend-people'>How many people are you <span class="hide-accept">accepting</span><span class="hide-reject">declining</span> for?</label>
-            <input type="number" min="1" max="4" name="weekend-people" id="weekend-people" value="2" required>
+        <div class="weekend-only-hide form-input">
+            <hr/>
+            <p class="form-label">Will you be staying at Tonedale House Friday & Saturday night?</p>
+            <div class="form-input radio-input">
+                <input type="radio" name="weekend-stay" id="yes-stay" value="yes" checked>
+                <label for="yes-stay">
+                    Yes
+                </label>
+            </div>
+            <div class="form-input radio-input">
+                <input type="radio" name="weekend-stay" id="no-stay" value="no">
+                <label for="no-stay">
+                    No - joining for part of the weekend
+                </label>
+            </div>
+            <div class="form-input not-staying-whole-weekend-hide">
+                <p><small><em>Please tell us which day(s) you'll be with us</em></small></p>
+                <textarea maxlength="200" name="weekend-stay-details" id="weekend-stay-details"></textarea>
+            </div>
         </div>
 
-        <div class="weekend-only-hide dietary-checkbox-group">
-            <p class="form-label">Does anyone in your party have any dietary requirements or allergies?*</p>
+        <div class="weekend-only-hide dietary-checkbox-group form-input">
+            <hr/>
+            <p class="form-label">Dietary requirements or allergies</p>
             <div class="form-input checkbox-input">
-                <input type="checkbox" id="dietary-none" name="weekend-dietary" value="none" checked>
-                <label for="dietary-none"> None</label>
+                <input type="checkbox" id="dietary-yes" name="weekend-dietary-yes" value="yes-dietary">
+                <label for="dietary-yes"> Yes, there are dietary requirements in my party</label>
             </div>
-            <div class="form-input checkbox-input">
-                <input type="checkbox" id="dietary-vegetarian" name="weekend-dietary" value="vegetarian">
-                <label for="dietary-vegetarian"> Vegetarian</label>
+            <div class="dietary-options-hide">
+                <p>Tick any that apply:</p>
+                <div class="form-input checkbox-input">
+                    <input type="checkbox" id="dietary-vegetarian" name="weekend-dietary" value="vegetarian">
+                    <label for="dietary-vegetarian"> Vegetarian</label>
+                </div>
+                <div class="form-input checkbox-input">
+                    <input type="checkbox" id="dietary-dairy" name="weekend-dietary" value="dairy intolerance">
+                    <label for="dietary-dairy"> Dairy intolerance</label>
+                </div>
+                <div class="form-input checkbox-input">
+                    <input type="checkbox" id="dietary-soy" name="weekend-dietary" value="soy intolerance">
+                    <label for="dietary-soy"> Soy intolerance</label>
+                </div>
+                <div class="form-input checkbox-input">
+                    <input type="checkbox" id="dietary-brazil" name="weekend-dietary" value="brazil allergy">
+                    <label for="dietary-brazil"> Nut allergy</label>
+                </div>
+                <div class="form-input checkbox-input">
+                    <input type="checkbox" id="dietary-other" name="weekend-dietary" value="other">
+                    <label for="dietary-other"> Other <em>(Please specify)</em></label>
+                </div>
+                <div class="form-input">
+                    <textarea maxlength="200" name="dietary-details" id="dietary-details"></textarea>
+                </div>
             </div>
-            <div class="form-input checkbox-input">
-                <input type="checkbox" id="dietary-dairy" name="weekend-dietary" value="dairy">
-                <label for="dietary-dairy"> Dairy intolerance</label>
-            </div>
-            <div class="form-input checkbox-input">
-                <input type="checkbox" id="dietary-soy" name="weekend-dietary" value="soy">
-                <label for="dietary-soy"> Soy intolerance</label>
-            </div>
-            <div class="form-input checkbox-input">
-                <input type="checkbox" id="dietary-soy" name="weekend-dietary" value="soy">
-                <label for="dietary-soy"> Brazil nut allergy</label>
-            </div>
-            <div class="form-input checkbox-input">
-                <input type="checkbox" id="dietary-other" name="weekend-dietary" value="other">
-                <label for="dietary-other"> Other <em>(Please specify)</em></label>
-            </div>
-            <div class="form-input">
-                <textarea name="dietary-details" id="dietary-details"></textarea>
-            </div>
+            
         </div>
         
         <div class="form-input party-only-hide">
-            <label for='song'>
+            <hr/>
+            <label for='weekend-song'>
                 What tune will get you on the dance floor at the party?
             </label>
-            <input type="text" name="song" id="song">
+            <input type="text" name="weekend-song" id="weekend-song">
         </div>
 
         <div class="form-input hide-until-rsvp-selected">
-            <label for='details'>
+            <hr/>
+            <label for='weekend-details'>
                 Leave us a note
             </label>
-            <p><em><small>A message, a memory, or question - anything you'd like to share.</small></em></p>
-            <textarea name="details" id="details"></textarea>
+            <p><em><small>A message, a memory, or a question - anything you'd like to share.</small></em></p>
+            <textarea maxlength="500" name="weekend-details" id="weekend-details"></textarea>
         </div>
         <div class="form-input rsvp-btn-container">
             <button class="rsvp-btn baskerville-regular capital-text disabled" type="button" id="send_weekend_rsvp_btn">
@@ -373,9 +399,9 @@ get_header();
 
         <div class="baskervill-regular">
             <em>If you need to update your response at any point, just drop us an email at rsvp@brett-and-beth.co.uk.</em>
-            </br>
+            <br/>
             <span class="alex-brush xl-font">with love,</span>
-            </br>
+            <br/>
             <span class="alex-brush xl-font">The Luffmans</span>
             
         </div>

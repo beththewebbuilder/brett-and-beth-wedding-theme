@@ -41,10 +41,17 @@ add_action( 'shutdown', function() {
    while ( @ob_end_flush() );
 } );
 
+function remove_emojis($value) {
+    $clean = wp_strip_all_tags($value);
+    $clean = preg_replace('/[\x{1F000}-\x{1FFFF}]/u', '', $clean);
+    return $clean;
+}
+
 add_action('wp_ajax_save_rsvp', 'save_rsvp');
 add_action('wp_ajax_nopriv_save_rsvp', 'save_rsvp');
 function save_rsvp() {
   global $wpdb;
+  $table = $wpdb->prefix . 'rsvp_response';
 
   if( $_POST['name'] != '') {
         try {
@@ -57,7 +64,7 @@ function save_rsvp() {
             $created_at = date('Y-m-d H:i:s');
 
             $wpdb->insert(
-                'wp_rsvp_response',
+                $table,
                 array(
                     'name' => $_POST['name'],
                     'people' => $_POST['people'],
@@ -76,7 +83,9 @@ function save_rsvp() {
             <title>Wedding RSVP</title>
             </head>
             <body>
-            <p>" . $_POST['name'] . " has " . $responseType . " the wedding invite!</p>
+            <h2>Wedding RSVP</h2>
+            <p>" . $_POST['name']  . "<em>(". $_POST['people'] . " people)</em> has " . $responseType . " the wedding invite!</p>
+            <p><strong>Message:</strong> ". $_POST['message'] ."</p>
             <p>Go to <a href='brett-and-beth.co.uk/our-rsvp'>brett-and-beth.co.uk/our-rsvp</a> to see all responses.</p>
             </body>
             </html>";
@@ -87,11 +96,104 @@ function save_rsvp() {
 
             mail($to,$subject,$message, $headers);
 
-            echo "Success";
+            wp_send_json_success(['id' => $wpdb->insert_id]);
         }
         catch (Exception $e) {
-            echo "Error";
+            wp_send_json_error([
+                'message'   => 'RSVP save failed',
+                'db_error'  => $wpdb->last_error ?? null,
+                'exception' => $e->getMessage(),
+            ], 500);
         }     
+    }
+    else {
+        wp_send_json_error(['message' => 'Name missing'], 400);
+    }
+    die();
+}
+
+add_action('wp_ajax_save_weekend_rsvp', 'save_weekend_rsvp');
+add_action('wp_ajax_nopriv_save_weekend_rsvp', 'save_weekend_rsvp');
+
+function save_weekend_rsvp() {
+    global $wpdb;
+    $table = $wpdb->prefix . 'rsvp_weekend_response';
+
+
+  if( $_POST['name'] != '') {
+        try {
+            $created_at = date('Y-m-d H:i:s');
+            
+            $inserted = $wpdb->insert(
+                $table,
+                array(
+                    'name' => remove_emojis(sanitize_text_field($_POST['name'] ?? '')),
+                    'accept_weekend' => filter_var($_POST['acceptWeekend'], FILTER_VALIDATE_BOOLEAN),
+                    'accept_party' => filter_var($_POST['acceptParty'], FILTER_VALIDATE_BOOLEAN),
+                    'stay_both_nights' => filter_var($_POST['stayBothNights'], FILTER_VALIDATE_BOOLEAN),
+                    'not_staying_details' => remove_emojis(sanitize_text_field($_POST['stayDetails'] ?? '')),
+                    'dietary_requirements' => filter_var($_POST['dietaryRequirements'], FILTER_VALIDATE_BOOLEAN),
+                    'dietary_details' => remove_emojis(sanitize_text_field($_POST['dietaryDetails'] ?? '')),
+                    'song' => remove_emojis(sanitize_text_field($_POST['song'] ?? '')),
+                    'message' => remove_emojis(sanitize_textarea_field($_POST['message'] ?? '')),
+                    'respond' => $created_at,
+                ),
+                array(
+                    '%s', // name
+                    '%d', // accept_weekend
+                    '%d', // accept_party
+                    '%d', // stay_both_nights
+                    '%s', // not_staying_details
+                    '%d', // dietary_requirements
+                    '%s', // dietary_details
+                    '%s', // song
+                    '%s', // message
+                    '%s', // respond
+                )
+            );
+
+            if ($inserted === false) {
+                error_log('RSVP insert failed: ' . $wpdb->last_error);
+                error_log('Last query: ' . $wpdb->last_query);
+            } else {
+                error_log('RSVP inserted, new ID: ' . $wpdb->insert_id);
+            }
+
+            //send email
+            $to = "rsvp@brett-and-beth.co.uk";
+            $subject = "VIP Wedding RSVP";
+            $message = "<html>
+            <head>
+            <title>Wedding RSVP</title>
+            </head>
+            <body>
+            <h2>Wedding RSVP</h2>
+            <p>" . $_POST['name'] . $_POST['acceptText'] . "!</p>
+            <p><strong>Staying both nights:</strong> ". $_POST['stayBothNights'] . " <em>". $_POST['stayDetails'] ."</em></p>
+            <p><strong>Message:</strong> ". $_POST['message'] ."</p>
+            <p><strong>Dietary requirements:</strong> ". $_POST['dietaryDetails'] ."</p>
+            <p>Go to <a href='brett-and-beth.co.uk/our-rsvp'>brett-and-beth.co.uk/our-rsvp</a> to see all responses.</p>
+            </body>
+            </html>";
+            
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $headers .= 'From: <webmaster@brett-and-beth.co.uk>' . "\r\n";
+
+            mail($to,$subject,$message, $headers);
+
+            wp_send_json_success(['id' => $wpdb->insert_id]);
+        }
+        catch (Exception $e) {
+            wp_send_json_error([
+                'message'   => 'RSVP save failed',
+                'db_error'  => $wpdb->last_error ?? null,
+                'exception' => $e->getMessage(),
+            ], 500);
+        }     
+    }
+    else {
+        wp_send_json_error(['message' => 'Name missing'], 400);
     }
     die();
 }

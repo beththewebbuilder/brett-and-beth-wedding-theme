@@ -2,8 +2,8 @@
 Theme Name: Brett & Beth Wedding Theme 2026
 Author: Bethany Fowler  
 Author URI: https://bethanyfowler.me/
-Description: Theme for Luffman Wedding: updated with blue floral pattern
-Version: 2.0.1
+Description: Theme for Luffman Wedding: updated with blue floral pattern and weekend page
+Version: 2.2.0
 Text Domain: buildnbloom
 */
 
@@ -187,6 +187,12 @@ hr {
 .dietary-checkbox-group {
     margin-bottom: 2rem;
 }
+.form-input hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: .5px solid #ccc;
+}
+
 .radio-input {
     display: flex;
 }
@@ -225,10 +231,10 @@ input[type="radio"]:checked::before, input[type="checkbox"]:checked::before{
   background-color: var(--navy);
 }
 
-.hide-until-rsvp-selected, .hide-reject, .hide-accept, .weekend-only-hide, .party-only-hide {
+.hide-until-rsvp-selected, .hide-reject, .hide-accept, .weekend-only-hide, .party-only-hide, .dietary-options-hide, .not-staying-whole-weekend-hide {
     display: none;
 }
-.show-rsvp-selected, .show-reject, .show-accept, .weekend-only-show, .party-only-show {
+.show-rsvp-selected, .show-reject, .show-accept, .weekend-only-show, .party-only-show, .dietary-options-show, .not-staying-whole-weekend-show {
     display: block;
 }
 label .show-reject, label .show-accept, .inline .show-reject, .inline .show-accept {
@@ -285,6 +291,7 @@ label .show-reject, label .show-accept, .inline .show-reject, .inline .show-acce
 }
 .loading-send img {
     width: 80%;
+    max-width: 25rem;
 }
 .loaded-content {
     display: none;

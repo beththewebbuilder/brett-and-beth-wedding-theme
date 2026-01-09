@@ -282,7 +282,7 @@ get_header();
 <p class="baskerville-regular">
     Please RSVP by 30th April 2026 </br>
     <small>
-    Alternatively RSVP via email us at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB.
+    Alternatively, you can RSVP by email at <a href="mailto:rsvp@brett-and-beth.co.uk">rsvp@brett-and-beth.co.uk</a> or post at 39 Hollingarth Way, Hemyock, EX15 3XB.
     </small>
 </p>
 
@@ -325,7 +325,7 @@ get_header();
             <label for='details'>
                 Leave us a note
             </label>
-            <p><em><small>A message, a memory, or question - anything you'd like to share.</small></em></p>
+            <p><em><small>A message, a memory, or a question - anything you'd like to share.</small></em></p>
             <textarea name="details" id="details"></textarea>
         </div>
         <div class="form-input rsvp-btn-container">
