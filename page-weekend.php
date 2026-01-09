@@ -161,8 +161,8 @@ get_header();
     Is there a dress code?
 </div>
 <div class="baskerville-regular">
-    <p>There's no strict dress code for the weekend — relaxed and comfortable is perfect.</p>
-    <p>For the ceremony, wear something celebratory and suitable for being outdoors. We'll be in a traditional three-piece suit and a white dress, so think smart-casual to garden-formal. 
+    <p>We'd love everyone to feel dressed up and celebratory for the weekend.</p>
+    <p>For the ceremony, please wear something smart and well-dressed, suitable for being outdoors. We'll be in a traditional three-piece suit and a white dress, so think garden formal. 
         As we're hoping to spend much of the day outside, appropriate footwear is recommended.</p>
 </div>
 
@@ -180,7 +180,7 @@ get_header();
             For a <em>little fancier</em> start to the day, <a href="https://www.braziercoffeeroasters.co.uk/file/brazier_food_menu_2025_spring_outlined.pdf">Brazier Café</a> sits just next door and offers lovely takeaway options — including excellent coffee to fuel you throughout the celebrations</li>
         <li>A low and slow smoked brisket and pork BBQ banquet-style wedding breakfast following the ceremony on Saturday</li>
     </ul>
-    <p>We won't have a bar, but we'll have a selection of soft drinks, fizz, wine, beer, ale, and cider available throughout the weekend. If you have a particular tipple of choice, or would prefer a spirit, you're very welcome to bring it along.</p>
+    <p>We won't have a bar, but we'll have plenty of soft drinks, fizz, wine, beer, ale, and cider available throughout the weekend. If you have a particular tipple of choice, or would prefer a spirit, you're very welcome to bring it along.</p>
 </div>
 
 <div class="floral-page-split">

@@ -255,20 +255,19 @@ $(document).ready(function() {
                 dietaryRequirements = true;
                 var dietaryResponse = $('input[name="weekend-dietary"]:checked');
                 dietaryResponse.each(function(index, value){
-                
-                if((dietaryResponse.length > 1) && index > 0) {
-                    dietaryText += ", ";
-                }
-                dietaryText += $(this).val();
-            });
-            dietaryText += ". " + $('#dietary-other').val();
+                    if((dietaryResponse.length > 1) && index > 0) {
+                        dietaryText += ", ";
+                    }
+                    dietaryText += $(this).val();
+                });
+                dietaryText += ". " + $('#dietary-details').val();
             }
             
 
             //Staying both nights//
-            var stayingBothNights = false
+            var stayingBothNights = true
             if($("input[name='weekend-stay']").val() != "yes") {
-                stayingBothNights = true;
+                stayingBothNights = false;
             }
             
             $.ajax({
@@ -339,9 +338,6 @@ $(document).ready(function() {
                     }
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
-                    console.log(xhr);
-                    console.log(ajaxOptions);
-                    console.log(thrownError)
                     alert('Hmm, there was a problem. Please try again or email rsvp@brett-and-beth.co.uk.');
                 }
             })

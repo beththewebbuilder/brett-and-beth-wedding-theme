@@ -171,7 +171,7 @@ function save_weekend_rsvp() {
             <p>" . $_POST['name'] . $_POST['acceptText'] . "!</p>
             <p><strong>Staying both nights:</strong> ". $_POST['stayBothNights'] . " <em>". $_POST['stayDetails'] ."</em></p>
             <p><strong>Message:</strong> ". $_POST['message'] ."</p>
-            <p><strong>Dietary requirements:</strong> ". $_POST['dietaryDetails'] ."</p>
+            <p><strong>Dietary requirements:</strong> ". $_POST['dietary_requirements'] . ": " . $_POST['dietaryDetails'] ."</p>
             <p>Go to <a href='brett-and-beth.co.uk/our-rsvp'>brett-and-beth.co.uk/our-rsvp</a> to see all responses.</p>
             </body>
             </html>";
