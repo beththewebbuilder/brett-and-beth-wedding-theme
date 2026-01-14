@@ -112,7 +112,11 @@ function save_rsvp() {
       );
 
       // --- Email pieces ---
-      $to      = 'rsvp@brett-and-beth.co.uk';
+      $to = [
+              'rsvp@brett-and-beth.co.uk',
+              'bethany.c.luffman@gmail.com',
+              'brettluffman@hotmail.co.uk',
+            ];
       $subject = 'Wedding RSVP - ' . ucwords($rawName);
 
       $badge = function($yes, $yesText = 'Accepted', $noText = 'Declined') {
@@ -337,7 +341,11 @@ function save_weekend_rsvp() {
                 </div>'
               : '';
             
-            $to = "rsvp@brett-and-beth.co.uk";
+            $to = [
+              'rsvp@brett-and-beth.co.uk',
+              'bethany.c.luffman@gmail.com',
+              'brettluffman@hotmail.co.uk',
+            ];
             $subject = "VIP RSVP " . ucwords($rawName);
             
             $emailHtml = '
