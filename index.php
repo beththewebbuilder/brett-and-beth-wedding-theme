@@ -126,7 +126,7 @@ get_header();
     Are children welcome?
 </div>
 <div class="baskerville-regular">
-    <p>Children are very welcome.</p>
+    <p>Children are very welcome, but will need to be supervised.</p>
     <p>We'll also have access to the football fields behind the pavilion, so there is plenty of space for running around and getting some fresh air between dances!</p>
 </div>
 <div class="floral-page-split">
@@ -329,6 +329,7 @@ get_header();
             <textarea name="details" id="details"></textarea>
         </div>
         <div class="form-input rsvp-btn-container">
+            <p style="color:#ba52a4" id="disabled-btn-helper"><small><em>Don't forget to enter your name 🩷</em></small></p>
             <button class="rsvp-btn baskerville-regular capital-text disabled" type="button" id="send_rsvp_btn">
                 Send RSVP
             </button>

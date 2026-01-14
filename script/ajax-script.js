@@ -62,10 +62,12 @@ $(document).ready(function() {
         if(responseSelected && nameEntered) {
             $("#send_rsvp_btn").prop('disabled', false);
             $("#send_rsvp_btn").removeClass('disabled');
+            $("#disabled-btn-helper").hide();
         }
         else {
             $("#send_rsvp_btn").prop('disabled', true);
             $("#send_rsvp_btn").addClass('disabled');
+            $("#disabled-btn-helper").show();
         }
     }
 
@@ -191,10 +193,12 @@ $(document).ready(function() {
         if(weekendResponseSelected && weekendNameEntered) {
             $("#send_weekend_rsvp_btn").prop('disabled', false);
             $("#send_weekend_rsvp_btn").removeClass('disabled');
+            $("#disabled-btn-helper").hide();
         }
         else {
             $("#send_weekend_rsvp_btn").prop('disabled', true);
             $("#send_weekend_rsvp_btn").addClass('disabled');
+            $("#disabled-btn-helper").show();
         }
     }
 

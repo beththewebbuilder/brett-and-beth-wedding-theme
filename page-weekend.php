@@ -28,14 +28,8 @@ get_header();
 </div>
 
 <div class="and-page-break">
-    <div class="border-container">
-        <img class="border-side border-left" src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-border-side.png"/>
-    </div>
-    <div class="and-text baskerville-regular capital-text lg-font">
-         and
-    </div>
-    <div class="border-container">
-        <img class="border-side border-right" src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-border-side.png"/>
+    <div class="and-text baskerville-regular capital-text xl-font">
+         &
     </div>
 </div>
 
@@ -161,9 +155,8 @@ get_header();
     Is there a dress code?
 </div>
 <div class="baskerville-regular">
-    <p>We'd love everyone to feel dressed up and celebratory for the weekend.</p>
-    <p>For the ceremony, please wear something smart and well-dressed, suitable for being outdoors. We'll be in a traditional three-piece suit and a white dress, so think garden formal. 
-        As we're hoping to spend much of the day outside, appropriate footwear is recommended.</p>
+    <p>We'd love everyone to wear traditional wedding attire for the ceremony.</p>
+    <p>We’ll be wearing a three-piece suit and a white wedding dress. As we’re hoping to spend much of the day outdoors, we recommend choosing footwear suitable for grass and garden paths.</p>
 </div>
 
 <div class="floral-page-split">
@@ -190,10 +183,10 @@ get_header();
     Venue rules & Hazards
 </div>
 <div class="baskerville-regular">
-    <p>Please note there is an unfenced waterway along the edge of the garden and a hot tub on site. Guests are asked to take care, and children must be supervised at all times. Hot tub use is at your own risk.</p>
+    <p>Please note there is an unfenced waterway along the edge of the garden and a hot tub on site. Guests are asked to take care. Hot tub use is at your own risk.</p>
     <p>Smoking and vaping are not permitted indoors.</p>
     <p>Fireworks and sky lanterns aren't allowed <em>(but we may enjoy some sparklers)</em>.</p>
-    <p>After 11.00pm, please keep noisy activity indoors. Music can be played in the party room with doors closed.</p>
+    <p>After 11.00pm, please keep noisy activity indoors. Music can be played until late in the party room, as long as the doors are closed.</p>
 </div>
 
 <div class="floral-bouquet">
@@ -201,14 +194,8 @@ get_header();
 </div>
 
 <div class="and-page-break">
-    <div class="border-container">
-        <img class="border-side border-left" src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-border-side.png"/>
-    </div>
     <div class="and-text baskerville-regular capital-text lg-font">
          The Party
-    </div>
-    <div class="border-container">
-        <img class="border-side border-right" src="<?php echo get_bloginfo('template_directory'); ?>/assets/floral-border-side.png"/>
     </div>
 </div>
 
@@ -217,13 +204,13 @@ get_header();
         Yes, we are being complete divas and having multiple celebrations! The <em>Happily Ever After Party</em> is our big, traditional reception bash on <strong>Saturday 20th June</strong>.
     </p>
     <p>
-        Guests are asked to arrive from <strong>6.30pm</strong>, but as our <em>very special VIPs</em> if you would like to arrive earlier to help with setup, we have access to the venue all day.
+        Guests are asked to arrive from <strong>6.00pm</strong>, but as our <em>very special VIPs</em> if you would like to arrive earlier to help with setup, we have access to the venue all day.
     </p>
     <p>
         We're planning to wear our wedding outfits again <em>(at what point does it become peacocking?)</em>, and asking our bridespeople and groomsmen to do the same. Feel free to re-wear your outfit or opt for something more party-ready — both are very welcome.
     </p>
     <p>
-        Our wedding caterers will be back with their food truck serving burgers and loaded fries <em>(so we hope you like them!)</em>. There will also be two bars at the venue. Food and drinks available to purchase, so please bring cash or card.
+        Food and drinks available to purchase, so please bring cash or card. Our wedding caterers will be back with their food truck serving burgers and loaded fries <em>(so we hope you like them!)</em>. There will also be two bars at the venue. 
     </p>
     <p>Some <a href="https://www.brett-and-beth.co.uk">party FAQs</a> have been put together for guests if you want more information.</p>
 </div>
@@ -325,7 +312,7 @@ get_header();
                     <label for="dietary-soy"> Soy intolerance</label>
                 </div>
                 <div class="form-input checkbox-input">
-                    <input type="checkbox" id="dietary-brazil" name="weekend-dietary" value="brazil allergy">
+                    <input type="checkbox" id="dietary-brazil" name="weekend-dietary" value="nut allergy">
                     <label for="dietary-brazil"> Nut allergy</label>
                 </div>
                 <div class="form-input checkbox-input">
@@ -356,6 +343,7 @@ get_header();
             <textarea maxlength="500" name="weekend-details" id="weekend-details"></textarea>
         </div>
         <div class="form-input rsvp-btn-container">
+            <p style="color:#ba52a4" id="disabled-btn-helper"><small><em>Don't forget to enter your name 🩷</em></small></p>
             <button class="rsvp-btn baskerville-regular capital-text disabled" type="button" id="send_weekend_rsvp_btn">
                 Send RSVP
             </button>
