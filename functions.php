@@ -83,6 +83,7 @@ function save_rsvp() {
       };
 
       // --- Normalise inputs ---
+      $rawName  = trim((string)($_POST['name'] ?? ''));   // for subject / logic
       $name    = sanitize_text_field($_POST['name'] ?? '');
       $people  = (int) ($_POST['people'] ?? 1);
       $answer  = sanitize_text_field($_POST['response'] ?? 'no'); // expects "yes" or "no"
@@ -112,7 +113,7 @@ function save_rsvp() {
 
       // --- Email pieces ---
       $to      = 'rsvp@brett-and-beth.co.uk';
-      $subject = 'Wedding RSVP – ' . ucfirst($type) . ' – ' . $name;
+      $subject = 'Wedding RSVP - ' . ucwords($rawName);
 
       $badge = function($yes, $yesText = 'Accepted', $noText = 'Declined') {
         $text = $yes ? "✔ $yesText" : "✖ $noText";
@@ -139,51 +140,46 @@ function save_rsvp() {
 
       // --- HTML email body ---
       $emailHtml = '
-<!doctype html>
-<html>
-  <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:24px 0;">
-      <tr>
-        <td align="center">
-          <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border:1px solid #eaeaea;border-radius:16px;overflow:hidden;">
-            <tr>
-              <td style="padding:22px 24px;border-bottom:1px solid #eee;">
-                <div style="font-size:20px;font-weight:800;color:#111;">Wedding RSVP</div>
-                <div style="margin-top:6px;color:#555;font-size:14px;">
-                  RSVP from <strong style="color:#111;">'.$safe($name).'</strong>
-                  <span style="color:#777;">('.(int)$people.' '.((int)$people === 1 ? 'person' : 'people').')</span>
-                </div>
-              </td>
-            </tr>
+          <!doctype html>
+          <html>
+            <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:24px 0;">
+                <tr>
+                  <td align="center">
+                    <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border:1px solid #eaeaea;border-radius:16px;overflow:hidden;">
+                      <tr>
+                        <td style="padding:22px 24px;border-bottom:1px solid #eee;">
+                          <div style="font-size:20px;font-weight:800;color:#111;">Wedding RSVP</div>
+                          <div style="margin-top:6px;color:#555;font-size:14px;">
+                            RSVP from <strong style="color:#111;">'.$safe($name).'</strong>
+                            <span style="color:#777;">('.(int)$people.' '.((int)$people === 1 ? 'person' : 'people').')</span>
+                          </div>
+                        </td>
+                      </tr>
 
-            <tr>
-              <td style="padding:18px 24px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
-                  <div style="font-weight:800;color:#111;">Response</div>
-                  <div>'.$badge($accept, 'Accepted', 'Declined').'</div>
-                </div>
+                      <tr>
+                        <td style="padding:18px 24px;">
+                          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+                            <div style="font-weight:800;color:#111;">Response</div>
+                            <div>'.$badge($accept, 'Accepted', 'Declined').'</div>
+                          </div>
 
-                '.$songBlock.'
-                '.$messageBlock.'
+                          '.$songBlock.'
+                          '.$messageBlock.'
+                        </td>
+                      </tr>
 
-                <div style="margin-top:20px;font-size:14px;color:#555;">
-                  View all responses:
-                  <a href="https://brett-and-beth.co.uk/our-rsvp" style="color:#111;">brett-and-beth.co.uk/our-rsvp</a>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:14px 24px;border-top:1px solid #eee;color:#777;font-size:12px;">
-                Sent from your RSVP form.
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>';
+                      <tr>
+                        <td style="padding:14px 24px;border-top:1px solid #eee;color:#777;font-size:12px;">
+                          Sent from your RSVP form. Tip: <a href="https://www.brett-and-beth.co.uk/our-rsvp">click here to view all responses.</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </body>
+          </html>';
 
       // --- Headers (nice From name in Gmail) ---
       $fromEmail = 'webmaster@brett-and-beth.co.uk';
@@ -231,6 +227,7 @@ function save_weekend_rsvp() {
         try {
             $created_at = date('Y-m-d H:i:s');
             
+            $rawName  = trim((string)($_POST['name'] ?? ''));   // for subject / logic
             $name              = safe($_POST['name'] ?? '');
             $acceptWeekend     = filter_var($_POST['acceptWeekend'] ?? false, FILTER_VALIDATE_BOOLEAN);
             $acceptParty       = filter_var($_POST['acceptParty'] ?? false, FILTER_VALIDATE_BOOLEAN);
@@ -341,7 +338,7 @@ function save_weekend_rsvp() {
               : '';
             
             $to = "rsvp@brett-and-beth.co.uk";
-            $subject = "VIP RSVP - " . ucfirst($type) . ' – ' . $name;;
+            $subject = "VIP RSVP " . ucwords($rawName);
             
             $emailHtml = '
             <!doctype html>

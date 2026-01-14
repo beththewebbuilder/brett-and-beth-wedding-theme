@@ -4,7 +4,7 @@ $yesPartyCount = (int) $wpdb->get_var("SELECT COUNT(*) FROM wp_rsvp_response WHE
 $noPartyCount  = (int) $wpdb->get_var("SELECT COUNT(*) FROM wp_rsvp_response WHERE accept = 0");
 $partyInvitees = 222;
 $partyResponsesReceived = $wpdb->get_var( "SELECT SUM(people) FROM wp_rsvp_response" );
-$allPartyResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_response" );
+$allPartyResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_response ORDER BY respond DESC" );
 $partyRemaining = max(0, (int)$partyInvitees - $partyResponsesReceived);
 $partyPct = ((int)$partyInvitees > 0) ? min(100, round(($partyResponsesReceived / (int)$partyInvitees) * 100)) : 0;
 
@@ -16,13 +16,13 @@ $noWeekendPartyCount  = (int) $wpdb->get_var("SELECT COUNT(*) FROM wp_rsvp_weeke
 $weekendInvitesSent = 12;
 $weekendResponsesReceived = (int) $wpdb->get_var( "SELECT COUNT(*) FROM wp_rsvp_weekend_response" );
 $weekendRemaining = max(0, $weekendInvitesSent - $weekendResponsesReceived);
-$allWeekendResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_weekend_response" );
+$allWeekendResponses = $wpdb->get_results( "SELECT * FROM wp_rsvp_weekend_response ORDER BY respond DESC" );
 
 function yn_icon($v) {
   return ((int)$v === 1) ? '✅' : '❌';
 }
 function h($v) {
-  return esc_html((string)$v);
+  return esc_html(stripslashes((string)$v));
 }
 
 // ---- CSV export handler (Weekend RSVPs) ----
@@ -204,6 +204,9 @@ get_header();
 
 
 <div class="table-list">
+    <div style="text-align: right;">
+      <a class="btn-export" href="<?php echo esc_url($export_url); ?>">Export weekend CSV</a>
+    </div>
     <div class="table-tools">
         <label class="table-search">
             <span class="sr-only">Search RSVPs</span>
@@ -212,7 +215,6 @@ get_header();
 
         <div style="display:flex; gap:12px; align-items:center;">
             <div id="rsvpCount" class="table-count"></div>
-            <a class="btn-export" href="<?php echo esc_url($export_url); ?>">Export party CSV</a>
         </div>
     </div>
     <table id="weekendTable" class="inria-serif-regular rsvp-table">
@@ -251,11 +253,11 @@ get_header();
               <td class="notes">
                 <?php $dd = trim((string)$rsvp->dietary_details);
                 if ($dd !== ''): ?>
-                  <details><summary>View</summary><div class="details-box"><?php echo h($dd); ?></div></details>
+                  <details><summary>View</summary><div class="details-box"><?php echo safe(h($dd)); ?></div></details>
                 <?php endif; ?>
               </td>
         
-              <td><?php echo h($rsvp->song); ?></td>
+              <td><?php echo safe(h($rsvp->song)); ?></td>
         
               <td class="notes">
                 <?php $msg = trim((string)$rsvp->message);
@@ -284,7 +286,7 @@ get_header();
 </div>
 
 <div class="rsvp-dashboard">
-  <div class="dash-card">
+  <div class="dash-card dash-card-wide">
     <div class="dash-title baskerville-regular">Party RSVPs</div>
     <div class="dash-split">
       <div class="dash-metric">
@@ -330,6 +332,9 @@ get_header();
 </div>
 
 <div class="table-list">
+    <div style="text-align: right;">
+      <a class="btn-export" href="<?php echo esc_url($party_export_url); ?>">Export party CSV</a>
+    </div>
     <div class="table-tools">
         <label class="table-search">
             <span class="sr-only">Search party RSVPs</span>
@@ -338,7 +343,6 @@ get_header();
 
         <div style="display:flex; gap:12px; align-items:center;">
             <div id="partyCount" class="table-count"></div>
-            <a class="btn-export" href="<?php echo esc_url($party_export_url); ?>">Export party CSV</a>
         </div>
     </div>
   <table id="partyTable" class="inria-serif-regular rsvp-table">
