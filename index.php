@@ -39,7 +39,7 @@ get_header();
 <div class="baskerville-regular capital-text lg-font">Sat 20 Jun 2026</div>
 <div>
     <span class="alex-brush additional">from</span>
-    <span class="baskerville-regular">6.30pm</span>
+    <span class="baskerville-regular">6.00pm</span>
     <span class="alex-brush additional">until</span>
     <span class="baskerville-regular">late</span>
 </div>
@@ -69,7 +69,7 @@ get_header();
     What time should I arrive?
 </div>
 <div class="baskerville-regular">
-    <p>You're very welcome to arrive any time from 6.30pm. We're planning to cut the cake at 7.30pm, followed by our first dance to kick off the disco.</p>
+    <p>You're very welcome to arrive any time from 6.00pm. We're planning to cut the cake at 7.30pm, followed by our first dance to kick off the disco.</p>
     <p>If you don't want to miss those moments, be sure to join us by then!</p>
 </div>
 <div class="floral-page-split">
@@ -80,7 +80,7 @@ get_header();
     Will there be food and drink?
 </div>
 <div class="baskerville-regular">
-    <p>Yes! The venue has two bars, and <a href="https://www.instagram.com/nomads_bbq">NomadsBBQ</a> will be on site with their food truck serving their <em>amazing</em> smoked brisket, pork, and loaded fries.</p>
+    <p>Yes! The venue has two bars which will be open all night, and <a href="https://www.instagram.com/nomads_bbq">NomadsBBQ</a> will be on site with their food truck serving their <em>amazing</em> smoked brisket, pork, and loaded fries from <strong>7.00pm - 9.00pm</strong>.</p>
     <p>And of course, there will be cake!</p>
     <p>Food and drinks will be available to purchase, so please bring cash or card.</p>
 </div>
@@ -237,18 +237,23 @@ get_header();
 <div class="baskerville-regular capital-text lg-font">
     Our Story
 </div>
-<p class="baskerville-regular">
-    <span class="alex-brush xl-font">
+<div class="alex-brush xl-font">
         Once upon a time...
-    </span>
-    <br/>
-    <i>
-        Our hero, hailing from the fair shire of Devon, set off on a noble (and slightly overdue) quest to find his maiden. 
-        With a little help from a modern-day matchmaker (because this is the 21st century), his journey led him beyond familiar fields and into the neighbouring land of Somerset.
-    </i>
+</div>
+<p class="baskerville-regular">
+    <em>
+        Our hero, hailing from the legendary shire of Devon, set off on a noble (and slightly overdue) quest to find his lady fair. 
+        With a little help from a modern-day matchmaker (because this is the 21st century), his journey carried him beyond Devon's 
+        rolling moors and winding rivers, and into the neighbouring land of Somerset.
+    </em>
 </p>
 <p class="baskerville-regular">
-    There was no dramatic meet-cute, no accidental coffee spill, and no running through airports. Instead, there were messages, memes, and the surprising discovery that Facebook Dating actually works.
+    <em>
+        Meanwhile, our heroine was conducting herself with all due sense and independence, quite unaware that fate (and a dating algorithm) 
+        had taken an interest in her prospects. It is a truth universally acknowledged that a single woman well-versed in 
+        romance might reasonably expect a meet-cute of her own — though not always in the manner imagined. Messages were exchanged, 
+        and it soon became clear that this meeting of minds was not merely agreeable, but rather promising indeed.
+    </em>
 </p>
 <p class="baskerville-regular">
     We met in February 2023 and clicked straight away, chatting about TV binges, favourite foods, and our shared love of the countryside (particularly Devon, for Brett). We both had that rare feeling that something important was beginning.
@@ -264,6 +269,10 @@ get_header();
     </br>
     <span class="alex-brush xl-font">happily ever after</span> party.
 </p>
+<p class="baskerville-regular"><em>
+    Not quite a meet-cute, but very much the real thing.
+</em></p>
+
 <div class="images text-center">
     <img class="inline-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/proposal.jpg"/>
     <img class="inline-image" src="<?php echo get_bloginfo('template_directory'); ?>/assets/ring.jpg"/>
@@ -289,9 +298,11 @@ get_header();
 <div class="form-container" id="rsvp">
     <form class="baskerville-regular" id="rsvp_form" novalidate>
         <div class="form-input">
-            <label for="name">Your name(s)*</label>
-            <p><em>If you're bringing a guest and their name isn't on the invitation, please add it here or drop us an email.</em></p>
-            <input type="text" name="name" id="name" placeholder="e.g. Jane & John Smith or The Johnsons" required>
+            <label for="name">Your full name(s)*</label>
+            <input type="text" name="name" id="name" placeholder="e.g. Jane & John Smith" required>
+            <small>
+                <em>Please include first and last names so we know exactly who's responding. If you're bringing a guest not named on the invitation, add them here too.</em>
+            </small>
         </div>
 
         <p class="form-label">Will you be attending?*</p>
@@ -329,7 +340,7 @@ get_header();
             <textarea name="details" id="details"></textarea>
         </div>
         <div class="form-input rsvp-btn-container">
-            <p style="color:#ba52a4" id="disabled-btn-helper"><small><em>Don't forget to enter your name 🩷</em></small></p>
+            <p style="color:#ba52a4" id="disabled-btn-helper"><small><em>Don’t forget to enter your name and select your response 🩷</em></small></p>
             <button class="rsvp-btn baskerville-regular capital-text disabled" type="button" id="send_rsvp_btn">
                 Send RSVP
             </button>

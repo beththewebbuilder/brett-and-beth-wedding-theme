@@ -82,20 +82,20 @@ get_header();
 </div>
 <div class="baskerville-regular">
     <hr>
-    <p class="capital-text">Friday</p>
+    <p class="capital-text">Friday 5th</p>
     <hr>
     <p>Arrive any time after <strong>4.00pm</strong> to settle in and explore, there's no rush.</p>
     <p>Weather (and willing volunteers) permitting, we may play some informal garden games such as rounders or badminton.</p>
     <p>We'll gather for a BBQ around <strong>6.30pm</strong>, followed by a pub quiz hosted by the Luffman patriarch and a relaxed evening of drinks and fun together.</p>
 
     <hr>
-    <p class="capital-text">Saturday</p>
+    <p class="capital-text">Saturday 6th</p>
     <hr>
     <p>Enjoy a leisurely morning. Help yourself to breakfast, or if you're looking for something a little more indulgent, wander through the secret garden door to <a href="https://www.braziercoffeeroasters.co.uk/file/brazier_food_menu_2025_spring_outlined.pdf">Brazier Café</a>.</p>
     <p>The ceremony begins at <strong>12.30pm</strong> and, weather permitting, will be held outdoors, please bring appropriate footwear. This will be followed by a banquet-style feast, speeches, cake, and an evening of celebration.</p>
 
     <hr>
-    <p class="capital-text">Sunday</p>
+    <p class="capital-text">Sunday 7th</p>
     <hr>
     <p>A gentle final morning with coffee, packing up, and goodbyes. Guests are welcome to depart at their leisure, with check-out by <strong>4.00pm</strong>.</p>
 </div>
@@ -156,7 +156,7 @@ get_header();
 </div>
 <div class="baskerville-regular">
     <p>We'd love everyone to wear traditional wedding attire for the ceremony.</p>
-    <p>We’ll be wearing a three-piece suit and a white wedding dress. As we’re hoping to spend much of the day outdoors, we recommend choosing footwear suitable for grass and garden paths.</p>
+    <p>We'll be wearing a three-piece suit and a white wedding dress. As we’re hoping to spend much of the day outdoors, we recommend choosing footwear suitable for grass and garden paths.</p>
 </div>
 
 <div class="floral-page-split">
@@ -169,8 +169,8 @@ get_header();
     <p>Yes. We will be providing food and drink throughout the weekend, including:</p>
     <ul class="text-left">
         <li>A traditional British BBQ on Friday evening</li>
-        <li>A simple breakfast will be available on Saturday and Sunday (toast and bacon)<br/>
-            For a <em>little fancier</em> start to the day, <a href="https://www.braziercoffeeroasters.co.uk/file/brazier_food_menu_2025_spring_outlined.pdf">Brazier Café</a> sits just next door and offers lovely takeaway options — including excellent coffee to fuel you throughout the celebrations</li>
+        <li>A simple breakfast will be available on Saturday and Sunday (toast and bacon).
+            For something a <em>little fancier</em>, <a href="https://www.braziercoffeeroasters.co.uk/file/brazier_food_menu_2025_spring_outlined.pdf">Brazier Café</a> sits just next door and offers lovely takeaway options — including excellent coffee to fuel you throughout the celebrations</li>
         <li>A low and slow smoked brisket and pork BBQ banquet-style wedding breakfast following the ceremony on Saturday</li>
     </ul>
     <p>We won't have a bar, but we'll have plenty of soft drinks, fizz, wine, beer, ale, and cider available throughout the weekend. If you have a particular tipple of choice, or would prefer a spirit, you're very welcome to bring it along.</p>

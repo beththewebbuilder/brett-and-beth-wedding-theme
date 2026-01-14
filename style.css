@@ -583,8 +583,6 @@ td.yn, th.yn{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-top: 1px solid var(--navy);
-    border-bottom: 1px solid var(--navy);
     margin-top: 1rem;
     margin-bottom: 1rem;
     align-items: center;
